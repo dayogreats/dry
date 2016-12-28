@@ -1,6 +1,5 @@
 
 '.source.js':
-
   'app.all()':
     'prefix': 'app-all'
     'body': "app.all('${1:path}', function (req, res, next) { \n\t// the response \n\tres.${2:send}('${3:mesage}') \n\t\n\tnext() // pass control to the next handler \n});\n\$4"
