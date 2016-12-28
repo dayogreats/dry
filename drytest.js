@@ -1,1 +1,1 @@
-bone
+bone-man

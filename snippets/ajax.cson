@@ -1,6 +1,4 @@
 ".source.js":
   "bone man":
-    "prefix": "bone"
-    "body": '''
-      welcome to bone man!
-      '''
+    "prefix": "bone-man"
+    "body": 'heloooo'
