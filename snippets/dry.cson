@@ -1,4 +1,658 @@
-".source.js":
-  "dry init":
-    "prefix": "dry-1"
-    "body": 'dry init(S1)'
+
+'.source.js':
+
+  'app.all()':
+    'prefix': 'app-all'
+    'body': "app.all('${1:path}', function (req, res, next) { \n\t// the response \n\tres.${2:send}('${3:mesage}') \n\t\n\tnext() // pass control to the next handler \n});\n\$4"
+
+  'app.delete()':
+    'prefix': 'app-del'
+    'body': "// HTTP DELETE requests to the specified path.\napp.delete('${1:path}', function (req, res) { \n\tres.${2:send}('${3:DELETE request to homepage}');\n }); $2"
+
+  'app.disable()':
+    'prefix': 'app-disable'
+    'body': "// Sets the Boolean setting name to false. \napp.disable('${1:path name}'); $2 "
+
+  'app.disabled(name)':
+    'prefix': 'app-disabled'
+    'body': "// Returns true if the Boolean setting name is disabled (false). \napp.disabled('${1:name}'); $2 "
+
+  'app.enable()':
+    'prefix': 'app-enable'
+    'body': "// Sets the Boolean setting name to true. \napp.enable('${1:name}'); $2 "
+
+  'app.enabled(name)':
+    'prefix': 'app-enabled'
+    'body': "// Returns true if the Boolean setting name is enabled (true). \napp.enabled('${1:name}'); $2 "
+
+  'app.engine(ext, callback))':
+    'prefix': 'app-engine'
+    'body': "// Registers the given template engine callback as ext. \napp.engine('${1:ext}, ${2:callback}'); $3 "
+
+  'app.get(path, callback )':
+    'prefix': 'app-get'
+    'body': "app.get('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.post(path, callback )':
+    'prefix': 'app-post'
+    'body': "app.post('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.put(path, callback )':
+    'prefix': 'app-put'
+    'body': "app.put('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.patch(path, callback )':
+    'prefix': 'app-post'
+    'body': "app.patch('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.head(path, callback )':
+    'prefix': 'app-head'
+    'body': "app.head('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.checkout(path, callback )':
+    'prefix': 'app-checkout'
+    'body': "app.checkout('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.copy(path, callback )':
+    'prefix': 'app-copy'
+    'body': "app.copy('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.lock(path, callback )':
+    'prefix': 'app-lock'
+    'body': "app.lock('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.search(path, callback )':
+    'prefix': 'app-search'
+    'body': "app.search('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.merge(path, callback )':
+    'prefix': 'app-merge'
+    'body': "app.merge('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.mkactivity(path, callback )':
+    'prefix': 'app-mkactivity'
+    'body': "app.mkactivity('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.mkcol(path, callback )':
+    'prefix': 'app-mkcol'
+    'body': "app.mkcol('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.move(path, callback )':
+    'prefix': 'app-move'
+    'body': "app.move('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.m-search(path, callback )':
+    'prefix': 'app-m-search'
+    'body': "app.m-search('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.notify(path, callback )':
+    'prefix': 'app-notify'
+    'body': "app.notify('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.options(path, callback )':
+    'prefix': 'app-options'
+    'body': "app.options('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.purge(path, callback )':
+    'prefix': 'app-purge'
+    'body': "app.purge('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.report(path, callback )':
+    'prefix': 'app-report'
+    'body': "app.report'${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.subscribe(path, callback )':
+    'prefix': 'app-subscribe'
+    'body': "app.subscribe('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.trace(path, callback )':
+    'prefix': 'app-trace'
+    'body': "app.trace('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+
+  'app.unlock(path, callback )':
+    'prefix': 'app-unlock'
+    'body': "app.unlock('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+  'app.unsubscribe(path, callback )':
+    'prefix': 'app-unsubscribe'
+    'body': "app.unsubscribe('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+  'app.param([name], callback)':
+    'prefix': 'app-param'
+    'body': "app.param('${1:user}', function(req, res, next, ${2:id}) { \n// try to get the user details from the User model and attach it to the request object \nUser.find(${3:id}, function(err, ${4:user}) { \n\tif (err) { \n\tnext(err); \n} else if (${5:user}) { \n\treq.${6:user} = ${7:user}; \nnext(); \n} else { \n\tnext(new Error('failed to load data')); \n\t\t } \n\t }); \n}); $8"
+
+  'app.listen()':
+    'prefix': 'app-list'
+    'body': "// Server listening. \napp.listen($1); $2"
+
+  'app.listen(port, [hostname], [callback])':
+    'prefix': 'app-listen'
+    'body': "// Server listening. \napp.listen(${1:port}, function ($2) {   \n\tconsole.log('${3:log message}' + port); \n}); $4"
+
+  'app.path()':
+    'prefix': 'app-path'
+    'body': "app.path($1); $2"
+
+  'app.render(view, [locals], callback)':
+    'prefix': 'app-render'
+    'body': "app.render('${1:template}', function(err, html){ \n\t // $2 ... \n }); $3"
+
+  'app.route(view, [locals], callback)':
+    'prefix': 'app-route'
+    'body': "app.route($1); $2"
+
+  'app.r(view, [locals], callback)':
+    'prefix': 'appr'
+    'body': "app.path($1); $2"
+
+
+
+
+
+  'app.set(path, callback))':
+    'prefix': 'app-set'
+    'body': "app.engine('${1:ext}, ${2:callback}'); $3 "
+  'app.use(path, callback))':
+    'prefix': 'app-use'
+    'body': "app.use(function (req, res, next) { \n\tconsole.log('Time: %d', Date.now()); \nnext(); \n });"
+
+
+
+  'express(ext, callback))':
+    'prefix': 'express-app'
+    'body': "// add dependencies\nvar express = require('express'); \nvar app = express(); \n\n //server listening\napp.listen(3000); $2 "
+
+# REQUEST
+  'req.app':
+      'prefix': 'req-app'
+      'body': "req.app $2"
+
+  'req.body':
+      'prefix': 'req-body'
+      'body': "req.body  $2"
+
+  'req.cookies()':
+      'prefix': 'req-cookies'
+      'body': "req.cookies $2"
+
+  'req.baseurl':
+      'prefix': 'req-baseurl'
+      'body': "req.baseurl $2"
+
+  'req.ip':
+      'prefix': 'req-ip'
+      'body': "req.ip $2"
+
+  'req.ips':
+      'prefix': 'req-ips'
+      'body': "req.ips $2"
+
+  'req.params':
+      'prefix': 'req-params'
+      'body': "req.params $2"
+
+  'req.method':
+      'prefix': 'req-method'
+      'body': "req.method $2"
+
+  'req.fresh()':
+      'prefix': 'req-fresh'
+      'body': "req.fresh $2"
+
+  'req.originalUrl()':
+      'prefix': 'req-originalUrl'
+      'body': "req.originalUrl $2"
+
+  'req.protocol()':
+      'prefix': 'req-protocol'
+      'body': "req.protocol $2"
+
+  'req.path()':
+      'prefix': 'req-path'
+      'body': "req.path $2"
+
+  'req.query()':
+      'prefix': 'req-query'
+      'body': "req.query $2"
+
+  'req.route':
+      'prefix': 'req-route'
+      'body': "req.route $2"
+
+  'req.secure':
+      'prefix': 'req-secure'
+      'body': "req.secure $2"
+
+  'req.stale':
+      'prefix': 'req-stale'
+      'body': "req.stale $2"
+
+  'req.signedCookies':
+      'prefix': 'req-signedCookies'
+      'body': "req.signedCookies $2"
+
+  'req.xhr':
+      'prefix': 'req-xhr'
+      'body': "req.xhr $2"
+
+  'req.subdomains':
+      'prefix': 'req-subdomains'
+      'body': "req.subdomains $2"
+
+  'req.accepts(types)':
+      'prefix': 'req-accepts()'
+      'body': "req-accepts(${1:[types]}); $2"
+
+  'req.acceptsCharsets(charset [, ...])':
+      'prefix': 'req-acceptsCharsets()'
+      'body': "req.acceptsCharsets(${1:charset [, ...]}); $2"
+
+  'req.acceptsEncodings(encoding [, ...])':
+      'prefix': 'req-acceptsEncodings()'
+      'body': "req.acceptsEncodings(${1:encoding [, ...]}); $2"
+
+  'req.acceptsLanguages(lang [, ...])':
+      'prefix': 'req-acceptsLanguages()'
+      'body': "req.acceptsLanguages(${1:lang [, ...]}); $2"
+
+  'req.get()':
+      'prefix': 'req-get()'
+      'body': "req.get(${1}); $2"
+
+  'req.is(type)':
+      'prefix': 'req-is()'
+      'body': "req.is(${1:type}); $2"
+
+  'req.range()':
+      'prefix': 'req-range()'
+      'body': "req.range(${1:}); $2"
+
+  # BODY PARSER
+  'body parser full file':
+    'prefix': 'r#basic'
+    'body': """
+  var app = require('express')();
+  var bodyParser = require('body-parser');
+  var multer = require('multer'); // v1.0.5
+  var upload = multer(); // for parsing multipart/form-data
+
+  app.use(bodyParser.json()); // for parsing application/json
+  app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
+  app.post('/profile', upload.array(), function (req, res, next) {
+    console.log(req.body);
+    res.json(req.body);
+  });
+
+    """
+
+# METHODS
+  'res.append(field [, value])':
+    'prefix': 'res-append'
+    'body': """
+      // the specified value to the HTTP response header field. If the header is not already set,
+      //it creates the header with the specified value
+      res.append('Link', ['<http://localhost/>', '<http://localhost:3000/>']);
+      res.append('Warning', '199 Miscellaneous warning');
+      res.append('Set-Cookie', 'foo=bar; Path=/; HttpOnly');
+    ; $2
+    """
+
+  'res.attachment([filename])':
+    'prefix': 'res-attach'
+    'body': """
+      // Sets the HTTP response Content-Disposition header field to “attachment”
+      res.attachment('${1:res.attachment([filename])}');
+      // Content-Disposition: attachment; filename="logo.png"
+      // Content-Type: image/png
+    ; $2
+    """
+
+  'res.download(path [, filename] [, fn])':
+    'prefix': 'res-download'
+    'body': """
+      // Transfers the file at path as an “attachment”.
+      res.download('${1:path}', // /report-12345.pdf
+                    '${1:aliasname}',   //report.pdf
+                    function(err){
+                        if (err) {}{
+                          // Handle error, but keep in mind the response may be partially-sent
+                          // so check res.headersSent
+                        } else {
+                          // decrement a download credit, etc.
+                        }
+      });
+    ;
+    $2
+    """
+
+  'res.cookie(name, value [, options])':
+    'prefix': 'res-cookies'
+    'body': """
+      // Sets cookie name to value. The options parameter is an object that can have the following properties.
+        res.cookie('${1:name}', '${2:value}', //// e.g 'rememberme', 1
+            { domain: '${3:url}',     // domain: '.example.com'
+              expires: '${4:date}',   // new Date(Date.now() + 900000
+              path: '${5:name}',      // default: '/'
+              encode: '${6:encodedUrl}', // encode: string
+              secure: '${7:false}',   // secure: true
+              signed: '${8:false}',   // signed: true
+              httpOnly: '${9:false}'  // httpOnly: true
+              maxAge: '${10:number}'  // maxAge: 900000,
+            }
+        );
+    $11
+    """
+
+  'res.clearCookie(name [, options])':
+    'prefix': 'res-clearCookie'
+    'body': """
+        //Clears the cookie specified by name.
+        res.cookie('name', 'tobi', { path: '/admin' });
+        res.clearCookie('${1:name}', { path: '/admin' });
+    ; $2
+    """
+
+  'res.end([data] [, encoding])':
+    'prefix': 'res-end'
+    'body': """
+      //Ends the response process.
+      res.end();
+  $2
+  """
+
+  'res.format(object)':
+    'prefix': 'res-format'
+    'body': """
+      // Performs content-negotiation on the Accept HTTP header on the request object, when present.
+      res.format({
+          ${1: text}: function(){
+            res.send('hey');
+          },
+
+          ${2: html}: function(){
+            res.send('<p>hey</p>');
+          },
+
+          ${3: json} function(){
+            res.send({ message: 'hey' });
+          }
+      });
+  $4
+  """
+
+  'res.get(field)':
+    'prefix': 'res-get'
+    'body': """
+        // Returns the HTTP response header specified by field. The match is case-insensitive.
+        res.get('Content-Type');    // => "text/plain"
+  $1"""
+
+  'res.json([body])':
+    'prefix': 'res-json'
+    'body': """
+        // Sends a JSON response.
+        res.json($1);
+  $2
+  """
+
+  'res.jsonp([body])':
+    'prefix': 'res-jsonp'
+    'body': """
+        // Sends a JSON response with JSONP support.
+        res.json($1);
+  $2
+  """
+
+  'res.links(links)':
+    'prefix': 'res-links'
+    'body': """
+      // Joins the links provided as properties of the parameter to populate the response’s Link HTTP header field.
+      res.links({
+        next: '${1:url}'
+        last: '${2:more-urls}'
+      });
+
+  $3"""
+
+  'res.location(path)':
+    'prefix': 'res-location'
+    'body': """
+      // Sets the response Location HTTP header to the specified path parameter.
+      res.location('${1:url}'); // /foo/bar
+    $2
+    """
+
+  'res.redirect([status,] path))':
+    'prefix': 'res-redirect'
+    'body': """
+      res.location('${1:url}');
+    $2
+    """
+
+  'res.render(view [, locals] [, callback])':
+    'prefix': 'res-render'
+    'body': """
+      // Renders a view and sends the rendered HTML string to the client
+      res.render('${1:view}');
+    $2
+    """
+
+  'res.sendFile(path [, options] [, fn])':
+    'prefix': 'res-sendFile'
+    'body': """
+      //Transfers the file at the given path.
+      res.sendFile('${1:path}', ${2:options}, ${3: function} );
+    $2
+    """
+
+  'res.sendStatus(statusCode)':
+    'prefix': 'sendStatus'
+    'body': """
+      // Sets the response HTTP status code to statusCode and send its string representation as the response body.
+      res.sendStatus(200); // equivalent to res.status(200).send('OK')
+    $2
+    """
+
+  'res.set(field [, value])':
+    'prefix': 'res-set'
+    'body': """
+      //Sets the response’s HTTP header field to value. To set multiple fields at once, pass an object as the parameter.
+      res.set({
+        '${1:Content-Type': 'text/plain}',
+        '${2:Content-Length': '123}',
+        '${3:ETag': '12345}'
+      });
+    $4
+    """
+
+  'res.status()':
+    'prefix': 'res-status'
+    'body': """
+        // Sets the HTTP status for the response. It is a chainable alias of Node’s response.statusCode.
+        res.status({1:code});
+    $2
+    """
+
+  'res.type(type)':
+    'prefix': 'res-type'
+    'body': """
+    // Sets the Content-Type HTTP header to the MIME type.
+    res.type('${1:type}');  // e.g html
+    $2
+    """
+
+  'res.vary(field)':
+    'prefix': 'res-vary'
+    'body': """
+      // Adds the field to the Vary response header, if it is not there already.
+      res.vary('${1:User-Agent}').render('docs');
+    $2
+    """
+
+
+# RESPONSE
+  'res.send()':
+      'prefix': 'res-send()'
+      'body': "res.send('${1:message}'); $2 "
+
+  # 'res.status()':
+  #     'prefix': 'res-status'
+  #     'body': "res.status(${1:status code}); $2"
+  'res.headersSent':
+      'prefix': 'res-headersSent'
+      'body': "res.headersSent $2"
+  'res.locals':
+      'prefix': 'res-locals'
+      'body': "res.locals $2"
+
+# ROUTER
+
+  'router.all(path, [callback, ...] callback)':
+    'prefix': 'router-all'
+    'body': """
+       // This method is just like the router.METHOD() methods, except that it matches all HTTP methods (verbs).
+        router.all('${1:*}', function(req, res, next){
+          res.${2:send}('${3:hello world}');
+          next($4);
+        });
+    $5
+    """
+
+  'router.get()':
+    'prefix': 'router-get'
+    'body': """
+       router.get('${1:url}', function(req, res){
+         ${2:res.send('hello world')};
+       });
+    $3
+    """
+
+  'router.get()':
+    'prefix': 'router-get'
+    'body': """
+       router.get('${1:url}', function(req, res){
+         ${2:res.send('hello world')};
+       });
+    $3
+    """
+
+  'router.put()':
+    'prefix': 'router-put'
+    'body': """
+       router.put('${1:url}', function(req, res){
+         ${2:res.send('hello world')};
+       });
+    $3
+    """
+
+  'router.patch()':
+    'prefix': 'router-patch'
+    'body': """
+       router.patch('${1:url}', function(req, res){
+         ${2:res.send('hello world')};
+       });
+    $3
+    """
+
+  'router.post()':
+    'prefix': 'router-post'
+    'body': """
+       router.post('${1:url}', function(req, res){
+         ${2:res.send('hello world')};
+       });
+    $3
+    """
+
+  'router.delete()':
+    'prefix': 'router-delete'
+    'body': """
+       router.delete('${1:url}', function(req, res){
+         ${2:res.send('hello world')};
+       });
+    $3
+    """
+
+  'router.use([path], [function, ...] function)':
+    'prefix': 'router-set'
+    'body': """
+       // always invoked this middleware
+        router.use('${1:path}', function(req, res, next) {
+          ${2:res.send('Hello World')};
+        });
+    $3
+    """
+
+  'router.route([path], [function, ...] function)':
+    'prefix': 'router-route'
+    'body': """
+        router.route('${1:path}')
+        .all(function(req, res, next) {
+          // runs for all HTTP verbs first
+          // think of it as route specific middleware!
+          next();
+        })
+    $3
+    """
+
+  'router.param()':
+    'prefix': 'router-param'
+    'body': """
+      router.param('${1:user}', function(req, res, next, ${2:id}) {
+
+  // try to get the user details from the User model and attach it to the request object
+  User.find(${3:id}, function(err, ${4:user}) {
+        if (err) {
+            next(err);
+          } else if (${5:user}) {
+            req.${6:user} = ${7:user};
+            next();
+          } else {
+            next(new Error('failed to load data'));
+          }
+        });
+      });
+    $8
+    """
+
+
+
+# POPULATE
+
+  # 'require("body-parser")':
+  #   'prefix': '#body'
+  #   'body': "require('body-parser'); $2"
+  # 'require("express")':
+  #   'prefix': '#exp'
+  #   'body': "require('express'); $2"
+
+  # BODY-PARSER
+  'require("body-parser")':
+    'prefix': 'bodyparser'
+    'body': 'var bodyParser = require("body-parser"); $1'
+
+  'bodyParser.json(options)':
+    'prefix': 'body-json'
+    'body': "bodyParser.json({}); $1"
+
+  'bodyParser.raw(options)':
+    'prefix': 'body-raw'
+    'body': "bodyParser.raw({}); $1"
+
+  'bodyParser.urlencoded(options)':
+    'prefix': 'body-urlEncoded'
+    'body': "bodyParser.urlEncoded({}); $1"
+
+  'bodyParser.text(options)':
+    'prefix': 'body-text'
+    'body': "bodyParser.text({}); $1"
+
+  'bodyParser.text(options)':
+    'prefix': 'body-text'
+    'body': "bodyParser.text({}); $1"
+
+  'bodyParser.text(options)':
+    'prefix': 'body-text'
+    'body': "bodyParser.text({}); $1"
+
+  'bodyParser.text(options)':
+    'prefix': 'body-text'
+    'body': "bodyParser.text({}); $1"
