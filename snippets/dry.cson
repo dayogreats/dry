@@ -1,0 +1,4 @@
+".source.js":
+  "dry init":
+    "prefix": "dry-1"
+    "body": 'dry init(S1)'
