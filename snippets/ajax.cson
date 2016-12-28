@@ -1,6 +1,6 @@
 ".source.js":
-  "$.bone":
+  "bone man":
     "prefix": "bone"
     "body": '''
-      $.bone(${1:url}${2:, ${3:options}})$0
+      welcome to bone man!
       '''
