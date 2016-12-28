@@ -1,0 +1,6 @@
+".source.js":
+  "$.bone":
+    "prefix": "bone"
+    "body": '''
+      $.bone(${1:url}${2:, ${3:options}})$0
+      '''
