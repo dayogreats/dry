@@ -1,14 +1,17 @@
 {
   "name": "dry",
   "version": "2.0.0",
-  "main": "index.js"
+  "main": "./snippets",
   "description": "A collection of snippets covering all of the Expressjs, body-parser APIs.",
   "keywords": [
     "Atom",
     "Nodejs",
     "Electron",
     "ExpressJs",
-    "body-parser"
+    "body-parser",
+    "snippets",
+    "js",
+    "template"
   ],
   "repository": {
     "type": "git",
@@ -24,5 +27,10 @@
   "bugs": {
     "url": "https://github.com/dayogreats/dry/issues"
   },
-  "homepage": "https://github.com/dayogreats/dry#readme"
+  "homepage": "https://github.com/dayogreats/dry#readme",
+  "extensions": {
+    ".json": [
+      "package.json"
+    ]
+  },
 }
