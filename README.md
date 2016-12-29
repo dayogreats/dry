@@ -1,6 +1,6 @@
 # DRY(Don't Repeat Yourself)
 
-A collection of snippets covering all of [expressjs](http://expressjs.com/), [socket.io](http://socket.io/), [passportjs](http://passportjs.com/), [electron](http://electron.atom.io/),  and [body-parser](https://github.com/expressjs/body-parser)   APIs.
+A collection of snippets covering all of [expressjs](http://expressjs.com/), [socket.io](http://socket.io/), [passportjs](http://passportjs.com/), [electron](http://electron.atom.io/),  and [body-parser](https://github.com/expressjs/body-parser) APIs.
 
 ## Notes
 
