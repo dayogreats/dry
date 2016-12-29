@@ -37,9 +37,11 @@ Thanks!
 
 | dash notation       | prefix          | expansion |
 | ------------- |:-------------:| -----:|
-| app-      | app- | $1600 |
-| -      | res-      |   $12 |
-| -| req-     |    $1 |
+| -      | app- |  |
+| -      | res-      |    |
+| -| req-     |    will expand to mvc template with db basic |
 
+| -| exp-app    |    will expand to mvc template with db basic |
+| -| exp-mvc     |    will expand to mvc template with db basic |
 
 ![1483039032972.gif](https://github.com/dayogreats/dry/blob/master/screenshoots/1483039032972.gif)
