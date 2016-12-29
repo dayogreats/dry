@@ -1,4 +1,4 @@
-# DRY(Don't Repeat Yourself)
+# DRY(DON'T REPEAT YOURSELF)
 
 A collection of snippets covering all of [expressjs](http://expressjs.com/), [socket.io](http://socket.io/), [passportjs](http://passportjs.com/), [electron](http://electron.atom.io/),  and [body-parser](https://github.com/expressjs/body-parser) APIs.
 
@@ -12,6 +12,13 @@ A collection of snippets covering all of [expressjs](http://expressjs.com/), [so
 * Contributions are always appreciated. Please fork this repo, make changes or additions, and send a pull request.
 
 Thanks!
+
+#FEATURES
++ Full expressjs 4.x api documentation
++ LeftLabel color added to the prefix(es)
++ Express version indicated to show current support version
++ Footer comments added
++ Read more the Apis online documentation
 
 # TODO
 1. Add electron support
@@ -29,4 +36,4 @@ Thanks!
 |exp-app| ...will give you basic app snippet without db|
 
 
-![]()
+![1483039032972.gif](https://github.com/dayogreats/dry/blob/master/screenshoots/1483039032972.gif)
