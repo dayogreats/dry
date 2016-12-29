@@ -1,13 +1,18 @@
-
 // add dependencies
 var express = require('express');
+var bodyparser = require('body-parser');
+
+//database
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/myappdatabase');
+
+//middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+//intialize express app
 var app = express();
 
-// root route
-app.get('/', function(req, res) {
-  res.type('text/plain');
-  res.send('i am a beautiful butterfly');
-});
-
- //server listening
-app.listen(9000);
+//server listening
+app.listen(3000);
+ 
