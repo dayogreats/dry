@@ -4,7 +4,7 @@ A collection of snippets covering all of [expressjs](http://expressjs.com/), [so
 
 ## Notes
 
-* In software engineering, Don't Depeat Yourself (DRY) is a principle of software development, aimed at reducing repetition of information of all kinds, especially useful in multi-tier architectures.
+* In software engineering, Don't Repeat Yourself (DRY) is a principle of software development, aimed at reducing repetition of information of all kinds, especially useful in multi-tier architectures.
 
 * Using #DRY shouldn't be a problem, since you don't have to type out the complete prefix before choosing a snippet. If there is a better way to avoid prefix conflicts, please let me know in my [github issue](https://github.com/dayogreats/dry/issues/new).
 
