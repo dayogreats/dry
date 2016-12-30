@@ -2,7 +2,7 @@
   "name": "dry",
   "version": "4.3.0",
   "main": "./snippets",
-  "description": "A collection of snippets covering all of [expressjs](http://expressjs.com/), [socket.io](http://socket.io/), [passportjs](http://passportjs.com/), [electron](http://electron.atom.io/),  and [body-parser](https://github.com/expressjs/body-parser)   APIs.",
+  "description": "A collection of snippets covering all of expressjs, socket.io, passportjs, electron,  and body-parser APIs.",
   "keywords": [
     "Atom",
     "Nodejs",

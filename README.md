@@ -28,19 +28,13 @@ Thanks!
 
 #USAGE
 
-|expressions | expansion|
-|app-| ...will expand to available prefixes|
-|res-| ...will expand to available prefixes|
-|req-| ...will expand to available prefixes|
-|exp-mvc| ...will expand to mvc template with db basic|
-|exp-app| ...will give you basic app snippet without db|
+
 
 | dash notation       | prefix          | expansion |
 | ------------- |:-------------:| -----:|
 | -      | app- |  |
 | -      | res-      |    |
 | -| req-     |    will expand to mvc template with db basic |
-
 | -| exp-app    |    will expand to mvc template with db basic |
 | -| exp-mvc     |    will expand to mvc template with db basic |
 
