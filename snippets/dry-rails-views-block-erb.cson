@@ -1,0 +1,47 @@
+'.text.html.ruby, .text.html.erb, .source.js.rails, .yaml':
+
+  'erb_render_block':
+    'prefix': '='
+    'body': '<%= $1 %>'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Web requests are handled by Action Controller and Action View. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/action_view_overview.html '
+
+
+#
+'.text.html.erb > .embedded.line.erb > .source.ruby,
+ .text.html.erb > .embedded.line.erb > .embedded.end.erb,
+ .text.html.ruby > .embedded,
+.embedded.ruby':
+#
+
+  'embedded each':
+    'prefix': '.each'
+    'body': """
+      .each do |${1:member}| %>
+        <%= ${1:member} $2 %>
+      <% end
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Web requests are handled by Action Controller and Action View. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/action_view_overview.html '
+  'embedded block':
+    'prefix': 'do'
+    'body': """
+      do %>
+        <%= $1 %>
+      <% end
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Web requests are handled by Action Controller and Action View. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/action_view_overview.html '
+  'embedded block with parm':
+    'prefix': 'block-para'
+    'body': """
+      do |${1:member}| %>
+        <%= ${1:member}$2 %>
+      <% end
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Web requests are handled by Action Controller and Action View. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/action_view_overview.html '

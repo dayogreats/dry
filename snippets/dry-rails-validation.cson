@@ -1,0 +1,70 @@
+'.source.ruby, .source.ruby.rails':
+
+# VALIDATION
+  'validates_confirmation_of':
+    'prefix': 'validates_confirmation_of :'
+    'body': 'validates_confirmation_of :${1:field}'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em'>rails</span>"
+    'description': 'Validate the state of objects before they go into the database using Active Record\'s validations feature. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_validations.html '
+
+  'generic_validation':
+    'prefix': 'generic_validation :'
+    'body': 'validates :${1:field_1}, ${2:presence}: true'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Validate the state of objects before they go into the database using Active Record\'s validations feature. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_validations.html '
+
+  'custom_validation':
+    'prefix': 'custom_validation'
+    'body': """
+      validate :${1:method_name}
+      def ${1:method_name}
+        ${2: #code...}
+      end
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Validate the state of objects before they go into the database using Active Record\'s validations feature. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_validations.html '
+
+  'validates_presence_of':
+    'prefix': 'validates_presence_of :'
+    'body': 'validates_presence_of :${1:field}'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Validate the state of objects before they go into the database using Active Record\'s validations feature. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_validations.html '
+
+  'validates_numericality_of':
+    'prefix': 'validates_numericality_of :'
+    'body': 'validates_numericality_of :${1:field}'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Validate the state of objects before they go into the database using Active Record\'s validations feature. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_validations.html '
+
+  'validtes_length_of':
+    'prefix': 'validtes_length_of :'
+    'body': 'validates_length_of :${1:field}, minimum: ${2:1}, maximum: ${3:10}$4'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Validate the state of objects before they go into the database using Active Record\'s validations feature. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_validations.html '
+
+  'validates_format_of':
+    'prefix': 'validates_format_of :'
+    'body': 'validates_format_of :${1:field}, with: ${2:REGEX}$3'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Validate the state of objects before they go into the database using Active Record\'s validations feature. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_validations.html '
+
+  'validates_uniqueness_of':
+    'prefix': 'validates_uniqueness_of :'
+    'body': 'validates_uniqueness_of :${1:field}'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Validate the state of objects before they go into the database using Active Record\'s validations feature. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_validations.html '
+
+  'validates_uniqueness_of_scope':
+    'prefix': 'validates_uniqueness_of :'
+    'body': 'validates_uniqueness_of :${1:field}, scope: :${2:other_field}'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Validate the state of objects before they go into the database using Active Record\'s validations feature. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_validations.html '

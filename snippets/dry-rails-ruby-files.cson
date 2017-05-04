@@ -1,0 +1,146 @@
+# this snippets are sensitive defaults when working with rails, are intended to
+# be used when the selected syntax is different than Ruby (Ruby on Rails).
+'.source.ruby, .source.ruby.rails':
+
+# RUBY/ RAILS FILES SYNTAX
+  'class':
+    'prefix': 'class'
+    'body': """
+      class ${1:ClassName}
+        ${2:#code}
+      end
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Ruby2.4</span>'
+    'description': '. '
+    'descriptionMoreURL': 'http://ruby-doc.org/core-2.4.1/doc/syntax/modules_and_classes_rdoc.html'
+
+  'model':
+    'prefix': 'model'
+    'body': """
+      class ${1:User} ${2:< ${3:ApplicationRecord}}
+        ${4:# lot of code :D}
+      end
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Ruby2.4</span>'
+    'description': '. '
+    'descriptionMoreURL': 'http://ruby-doc.org/core-2.4.1/doc/syntax/modules_and_classes_rdoc.html'
+
+  'controller':
+    'prefix': 'controller'
+    'body': """
+      class ${1:Users}Controller < ApplicationController
+        ${2:# lot of controller code :D}
+      end
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Ruby2.4</span>'
+    'description': '. '
+    'descriptionMoreURL': 'http://ruby-doc.org/core-2.4.1/doc/syntax/modules_and_classes_rdoc.html'
+
+  'module':
+    'prefix': 'module'
+    'body': """
+      module ${1:ModuleName}
+        ${2:#code}
+      end
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Ruby2.4</span>'
+    'description': '. '
+    'descriptionMoreURL': 'http://ruby-doc.org/core-2.4.1/doc/syntax/modules_and_classes_rdoc.html'
+
+  'concern':
+      'prefix': 'concern'
+      'body': """
+        module ${1:ConcernName}
+          extend ActiveSupport::Concern
+          ${2:included do
+            ${3:# code ...}
+          end}
+
+          # instance methods go here
+          ${4:# def instance_method
+          #
+          # end}
+
+          module ClassMethods
+            # static methods go here
+            ${5:# def static_method
+            #
+            # end}
+          end
+        end
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Ruby2.4</span>'
+    'description': '. '
+    'descriptionMoreURL': 'http://ruby-doc.org/core-2.4.1/doc/syntax/modules_and_classes_rdoc.html'
+
+  'each block':
+    'prefix': '.each'
+    'body': """
+      .each do |${1:member}|
+        ${2:#code...}
+      end $3
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Ruby2.4</span>'
+    'description': '. '
+    'descriptionMoreURL': 'http://ruby-doc.org/core-2.4.1/doc/syntax/modules_and_classes_rdoc.html'
+
+  'each_with_index':
+    'prefix': '.each_with_index do'
+    'body': """
+      .each_with_index do |${1:member}, ${2:index}|
+        ${3:#code...}
+      end $4
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Ruby2.4</span>'
+    'description': '. '
+    'descriptionMoreURL': 'http://ruby-doc.org/core-2.4.1/doc/syntax/modules_and_classes_rdoc.html'
+
+  'update_attribute':
+    'prefix': '.update_attribute :'
+    'body': '.update_attribute :${1:attribute}, "${2:new value}"'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Ruby2.4</span>'
+    'description': '. '
+    'descriptionMoreURL': 'http://ruby-doc.org/core-2.4.1/doc/syntax/modules_and_classes_rdoc.html'
+
+  'update_attributes':
+    'prefix': '.update_attributes :'
+    'body': """
+      .update_attributes(
+        ${1:attribute}: "${2:value1}",
+        ${3:attribute_2}: "${4:value2}"
+      )
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Ruby2.4</span>'
+    'description': '. '
+    'descriptionMoreURL': 'http://ruby-doc.org/core-2.4.1/doc/syntax/modules_and_classes_rdoc.html'
+
+  'elsif statement':
+    'prefix': 'elsif'
+    'body': 'elsif ${1:true}'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Ruby2.4</span>'
+    'description': '. '
+    'descriptionMoreURL': 'http://ruby-doc.org/core-2.4.1/doc/syntax/modules_and_classes_rdoc.html'
+
+  'elsif else statement':
+    'prefix': 'elsif '
+    'body': """
+      elsif ${1:true}
+        ${2:#code}
+      else
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Ruby2.4</span>'
+    'description': '. '
+    'descriptionMoreURL': 'http://ruby-doc.org/core-2.4.1/doc/syntax/modules_and_classes_rdoc.html'
+
+  'array_iteration':
+    'prefix': '.each do'
+    'body': """
+      ${1:array}.each do |${2:member}|
+        $3
+      end
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Ruby2.4</span>'
+    'description': '. '
+    'descriptionMoreURL': 'http://ruby-doc.org/core-2.4.1/doc/syntax/modules_and_classes_rdoc.html'
+
+  

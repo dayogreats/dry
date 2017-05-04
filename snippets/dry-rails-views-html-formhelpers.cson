@@ -1,0 +1,9 @@
+'.text.html.ruby,.text.html.erb':
+
+
+  'url_field':
+    'prefix': 'url_field'
+    'body': '<%= f.url_field :${1:field}${2:, class: "${3:form-control}"} %>'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': '<% Embedded ruby.. %>'
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'

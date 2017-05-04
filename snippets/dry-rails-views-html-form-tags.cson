@@ -1,0 +1,227 @@
+'.text.html.ruby,.text.html.erb':
+
+
+  'text_area_tag':
+    'prefix': 'text_area_tag'
+    'body': """
+      <%= text_area_tag(:${1:message}, "${1:Hi, nice site}", size: "24x6") %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'text_area_tag(name, content = nil, options = {}) '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'text_field_tag':
+    'prefix': 'text_field_tag'
+    'body': """
+      <%= text_field_tag '${1:ip}', ${2:'0.0.0.0', maxlength: 15, size: 20, class: "ip-input" } %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'text_area_tag(name, content = nil, options = {}) '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'password_field_tag':
+    'prefix': 'password_field_tag'
+    'body': """
+      <%= password_field_tag '${1:pin}'  {2: , '1234', maxlength: 4, size: 6, class: "pin_input" } %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'password_field_tag(name = "password", value = nil, options = {}) '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'hidden_field_tag':
+    'prefix': 'hidden_field_tag'
+    'body': "<%= hidden_field_tag 'collected_input', '', onchange: \"alert('Input collected!')\" %>"
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'hidden_field_tag(name, value = nil, options = {})'
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'search_field_tag':
+    'prefix': 'search_field_tag'
+    'body': """
+      <%= search_field_tag '${1:search}' ${2:, 'Enter your search query here', class: 'special_input', disabled: true } %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'search_field_tag(name, value = nil, options = {}) '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'select_tag':
+    'prefix': 'select_tag'
+    'body': """
+      <%= select_tag "${1:people}", options_from_collection_for_${2:select}(${3:@people, "id", "name"}), ${4:include_blank: true } %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'select_tag(name, option_tags = nil, options = {})  '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'image_submit_tag':
+    'prefix': 'image_submit_tag'
+    'body': """
+      <%= image_submit_tag("agree.png", disabled: true, class: "agree_disagree_button") %>${0}
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'image_submit_tag(source, options = {}) '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'submit_tag':
+    'prefix': 'submit_tag'
+    'body': """
+      <%= submit_tag(value = "${1:Save changes}", ${2: options = {confirm: " questions?", data: {disabled: true}})} %>${0}
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'submit_tag(value = "Save changes", options = {}) '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'label_tag':
+    'prefix': 'label_tag'
+    'body': """
+        <%= label_tag 'name', nil, class: 'small_label' %> ${0}
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'label_tag(name = nil, content_or_options = nil, options = nil, &block)  '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'telephone_field_tag':
+    'prefix': 'telephone_field_tag'
+    'body': """
+      <%= telephone_field_tag '${1:tel}', ${2 '0123456789', class: 'special_input', disabled: true } %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'telephone_field_tag(name, value = nil, options = {}) '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'phone_field_tag':
+    'prefix': 'phone_field_tag'
+    'body': """
+      <%= phone_field(:${1:user}, :${1:phone}) %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'phone_field_tag(name, value = nil, options = {}) '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'phone_field_tag':
+    'prefix': 'phone_field_tag'
+    'body': """
+      <%= phone_field(:${1:user}, :${1:phone}) %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'radio_button_tag(name, value, checked = false, options = {}) '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'date_field_tag':
+    'prefix': 'date_field_tag'
+    'body': """
+      <%= radio_button_tag '${1:color}' ${2:, "green", true, class: "color_input"  } %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'date_field_tag(name, value = nil, options = {}) />'
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'datetime_field_tag':
+    'prefix': 'datetime_field_tag'
+    'body': """
+      <%= date_field_tag '${1:date}' ${2: , '01/01/2014', class: 'special_input', disabled: true } %>$
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'datetime_field_tag(name, value = nil, options = {}) >'
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'month_field_tag':
+    'prefix': 'month_field_tag'
+    'body': """
+      <%= month_field_tag(:${1:user}, ${1: min: 5, max: 8, step: 2}) %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'month_field_tag(name, value = nil, options = {}) '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'range_field_tag':
+    'prefix': 'range_field_tag'
+    'body': """
+      <%= range_field_tag(:${1:product}, :${2:discount}, in: 1..100) %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description':  ' range_field_tag(name, value = nil, options = {})  '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'week_field_tag':
+    'prefix': 'week_field_tag'
+    'body': """
+
+      <%= week_field_tag(${1:name}, ${2: value = nil, options = {}) } %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'week_field_tag(name, value = nil, options = {}) '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'number_field_tag':
+    'prefix': 'number_field_tag'
+    'body': """
+      <%= number_field_tag 'quantity' ${1: , '1', min: 3, max: 7, class: 'special_input', disabled: true} %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'number_field_tag(name, value = nil, options = {}) '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'color_field_tag':
+    'prefix': 'color_field_tag'
+    'body': """
+      <%= color_field_tag 'color', '${1:#DEF726}' ${2: , class: 'special_input', disabled: true } %>$0
+
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'color_field_tag(name, value = nil, options = {})  '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'url_field_tag':
+    'prefix': 'url_field_tag'
+    'body': """
+      <%= url_field_tag(${1:name}, ${2: value = nil, options = {}) } %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'url_field_tag(name, value = nil, options = {}) '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'email_field_tag':
+    'prefix': 'email_field_tag'
+    'body': """
+      <%= email_field_tag '${1:email}' ${2: , 'email@example.com', class: 'special_input', disabled: true } %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'email_field_tag(name, value = nil, options = {}) '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'time_field_tag':
+    'prefix': 'time_field_tag'
+    'body': """
+      <%= time_field_tag(${1:name}, ${2:value = nil,  options = { min: 2, max: 5, step:3}) } %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'time_field_tag(name, value = nil, options = {}) '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'file_field_tag':
+    'prefix': 'time_field_tag'
+    'body': """
+      <%= file_field_tag "${1:file}" %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'file_field_tag(name, options = {}) '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'button_field_tag':
+    'prefix': 'button_field_tag'
+    'body': """
+    <%= button_tag '${1:Reset}', ${2: type: 'reset', disabled: true, data: { confirm: "Are you sure?", disable_with: "Please wait..."} } %>$0
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'button_tag(content_or_options = nil, options = nil, &block) '
+  'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormTagHelper.html'
+
+  'check_box_tag':
+    'prefix': 'check_box_tag'
+    'body': """
+    <% check_box_tag '${1:eula}', ${2:'accepted', false, disabled: true} %>
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'check_box_tag(name, value = "1", checked = false, options = {})  '
+  'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormTagHelper.html'

@@ -1,0 +1,31 @@
+'.text.haml > .line.ruby.haml > .source.ruby, .text.haml > .line.ruby.haml > .source.ruby.embedded.html':
+
+  'haml embedded each':
+    'prefix': '.each'
+    'body': """
+      .each do |${1:member}|
+        = ${1:member} $2
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em'>rails</span>"
+    'description': 'Haml Action View. '
+    'descriptionMoreURL': '# '
+
+  'haml embedded block':
+    'prefix': 'do'
+    'body': """
+      do
+        = $1
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Haml Action View. '
+    'descriptionMoreURL': '#'
+
+  'haml embedded block with parm':
+    'prefix': 'do params'
+    'body': """
+      do |${1:member}|
+        = ${1:member}$2
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Web requests are handled by Action Controller and Action View. '
+    'descriptionMoreURL': '#'

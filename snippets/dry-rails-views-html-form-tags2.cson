@@ -1,0 +1,159 @@
+'.text.html.ruby,.text.html.erb':
+
+
+  'text_area_tag':
+    'prefix': 'text_area_tag'
+    'body': """
+      <%= text_area_tag(:${1:message}, "${1:Hi, nice site}", size: "24x6") %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': '<textarea id="message" name="message" cols="24" rows="6">Hi, nice site</textarea>'
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'password_field_tag':
+    'prefix': 'password_field_tag'
+    'body': """
+      <%= password_field_tag(:${1:password}) %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': '<input id="password" name="password" type="password" />'
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'hidden_field_tag':
+    'prefix': 'hidden_field_tag'
+    'body': """
+      <%= hidden_field_tag(:${1:parent_id}, "5") %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': '<input id="parent_id" name="parent_id" type="hidden" value="5" />'
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'search_field_tag':
+    'prefix': 'search_field_tag'
+    'body': """
+      <%= search_field(:${1:user}, :${2:name}) %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': '<input id="user_name" name="user[name]" type="search" />'
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'telephone_field_tag':
+    'prefix': 'telephone_field_tag'
+    'body': """
+      <%= telephone_field(:${1:user}, :${1:phone}) %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': '<input id="user_phone" name="user[phone]" type="tel" />'
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'date_field_tag':
+    'prefix': 'date_field_tag'
+    'body': """
+      <%= date_field(:${1:user}, :${2:born_on}) %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': '<input id="user_born_on" name="user[born_on]" type="date" />'
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'datetime_field_tag':
+    'prefix': 'datetime_field_tag'
+    'body': """
+      <%= datetime_local_field(:${1:user}, :${2:graduation_day}) %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': '<input id="user_graduation_day" name="user[graduation_day]" type="datetime-local" />'
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'month_field_tag':
+    'prefix': 'month_field_tag'
+    'body': """
+      <%= month_field(:${1:user}, :${1:birthday_month}) %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': '<input id="user_birthday_month" name="user[birthday_month]" type="month" />'
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'range_field_tag':
+    'prefix': 'range_field_tag'
+    'body': """
+      <%= range_field(:${1:product}, :${2:discount}, in: 1..100) %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': '<input id="product_discount" max="100" min="1" name="product[discount]" type="range" />'
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'week_field_tag':
+    'prefix': 'week_field_tag'
+    'body': """
+
+      <%= week_field(:${1:user }, :${2:birthday_week}) %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': '<% <input id="product_price" max="20.0" min="1.0" name="product[price]" step="0.5" type="week" /> %>'
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'number_field_tag':
+    'prefix': 'number_field_tag'
+    'body': """
+      <%= number_field(:${1:product}, :${2:price }, in: ${3:1.0..20.0}, step: ${4:0.5 } ) %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': '<input id="product_price" max="20.0" min="1.0" name="product[price]" step="0.5" type="number" />'
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'color_field_tag':
+    'prefix': 'color_field_tag'
+    'body': """
+      <%= color_field(:${1:user }, :${2: favorite_color }) %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': 'color_field_tag(name, value = nil, options = {})  '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'url_field_tag':
+    'prefix': 'url_field_tag'
+    'body': """
+      <%= url_field(:${1: user }, :${2: homepage}) %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': '<input id="user_homepage" name="user[homepage]" type="url" />'
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'email_field_tag':
+    'prefix': 'email_field_tag'
+    'body': """
+      <%= email_field(:${1:user}, :${2: address}) %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': '<input id="user_address" name="user[address]" type="email" />'
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+  'time_field_tag':
+    'prefix': 'time_field_tag'
+    'body': """
+      <%= time_field(:${1:task }, :${2:started_at} ) %>$0
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails Form Tag</span>'
+    'description': '<input id="task_started_at" name="task[started_at]" type="time" />'
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/form_helpers.html'
+
+
+
+
+  'button_field_tag':
+    'prefix': 'button_field_tag'
+    'body': """
+    <%= button_tag '${1:Reset}', ${2: type: 'reset', disabled: true, data: { confirm: "Are you sure?", disable_with: "Please wait..."} } %>$0
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'button_tag(content_or_options = nil, options = nil, &block) '
+  'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormTagHelper.html'
+
+  'check_box_tag':
+    'prefix': 'check_box_tag'
+    'body': """
+    <% check_box_tag '${1:eula}', ${2:'accepted', false, disabled: true} %>
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'check_box_tag(name, value = "1", checked = false, options = {})  '
+  'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormTagHelper.html'

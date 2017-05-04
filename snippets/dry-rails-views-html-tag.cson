@@ -1,0 +1,48 @@
+
+# HTML ATTRITUBES TAGS
+'.meta.tag.any.html':
+
+  'data-attribute':
+    'prefix': 'data-attribute'
+    'description': 'data-attribute="value"'
+    'body': 'data-${1:name}="${2:hello}"$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails</span>'
+    'description': 'HTML-EBR attributes '
+    'descriptionMoreURL': '# '
+
+  'class':
+    'prefix': 'class'
+    'description': 'class="class"'
+    'body': 'class="${1:btn btn-primary}"$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails</span>'
+    'description': 'HTML-EBR attributes '
+    'descriptionMoreURL': '# '
+
+  'id':
+    'prefix': 'id'
+    'description': 'id="id"'
+    'body': 'id="${1:btn-preview}"$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails</span>'
+    'descriptionMoreURL': '# '
+
+  'style':
+    'prefix': 'style'
+    'description': 'style="cssprop: value;"'
+    'body': 'style="${1:display: none;}"$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails</span>'
+    'descriptionMoreURL': '# '
+
+  'placeholder':
+    'prefix': 'placeholder'
+    'description': 'placeholder="placeholder"'
+    'body': 'placeholder="${1:John Doe}"$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails</span>'
+    'descriptionMoreURL': '# '
+
+  'data-turbolinks':
+    'prefix': 'data-turbolinks'
+    'description': 'data-turbolinks="value"'
+    'body': 'data-turbolinks="${1:false}"$0'
+    'body': 'placeholder="${1:John Doe}"$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails</span>'
+    'descriptionMoreURL': '# '

@@ -1,0 +1,127 @@
+'.source.ruby, .source.ruby.rails .meta.rails.model':
+
+# MODELS
+  'enum':
+    'prefix': 'enum'
+    'body': """
+      enum ${1:status}: [
+        :${2:active},
+        :${3:unactive},
+        :${4:archieved}
+      ]$0
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'the model - which is the layer of the system responsible for representing business data and logic. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_basics.html'
+  'scope':
+    'prefix': 'scope'
+    'body': 'scope :${1:scope_name}, -> { ${2:where(${3:${4:field}: ${5:true}})  } $0}'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'the model - which is the layer of the system responsible for representing business data and logic. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_basics.html'
+  'scope_params':
+    'prefix': 'scope_params'
+    'body': """
+      scope :${1:scope_name}, -> (${2:param}) do
+        where(${3:attribute}: ${2:param})
+      end
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'the model - which is the layer of the system responsible for representing business data and logic. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_basics.html'
+  'scope_lambda':
+    'prefix': 'scope_lambda'
+    'body': """
+      scope :${1:scope_name}, -> do
+        where(${2:"${3:created_at} ${4:>=} ?",} ${5:Time.now - 1.week})
+      end$6
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'the model - which is the layer of the system responsible for representing business data and logic. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_basics.html'
+  'scope_between_dates':
+    'prefix': 'scope_between_dates'
+    'body': """
+      scope :${1:scope_name}, -> do
+        where(
+          "${2:attribute} BETWEEN ? AND ?",
+          ${3:Time.now.at_beginning_of_day},
+          ${4:Time.now.at_end_of_day}
+        )
+      end$0
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'the model - which is the layer of the system responsible for representing business data and logic. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_basics.html'
+  'scope_joins_with_parameter':
+    'prefix': 'scope_joins_with_parameter'
+    'body': """
+      scope :${1:scope_name}, -> (${2:attribute}) do
+        joins(:${3:table_name}).where(
+          "${3:table_name}.${4:join_table_attribute} ${5:=} ?",
+          ${2:attribute}
+        )
+      end$0
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'the model - which is the layer of the system responsible for representing business data and logic. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_basics.html'
+  'scope_joins':
+    'prefix': 'scope_joins'
+    'body': """
+      scope :${1:scope_name},
+        joins(:${2:table_name})
+        .where(
+          "${2:table_name}.${3:join_table_attribute} ${4:=} ?",
+          ${5:true}
+        )$0
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'the model - which is the layer of the system responsible for representing business data and logic. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_basics.html'
+  'default_scope':
+    'prefix': 'default_scope'
+    'body': """
+      default_scope do
+        ${2:where(${3:field}: ${4:true})}
+      end$0
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'the model - which is the layer of the system responsible for representing business data and logic. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_basics.html'
+  'where string':
+    'prefix': '.where like'
+    'body': '.where("${1:attribute} LIKE ?", "%#{${2:expected}}%")$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'the model - which is the layer of the system responsible for representing business data and logic. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_basics.html'
+  'alias_attribute':
+    'prefix': 'alias_attribute'
+    'body': "alias_attribute :${1:new_name}, :${2:old_name}$0"
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'the model - which is the layer of the system responsible for representing business data and logic. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_basics.html'
+  'find':
+    'prefix': '.find'
+    'body': '.find(${2:params[:${1:id}]})$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'the model - which is the layer of the system responsible for representing business data and logic. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_basics.html'
+  'find_by_attribute':
+    'prefix': '.find_by_attribute'
+    'body': '.find_by_${1:name}(${3:params[:${2:${1:name}}]})$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'the model - which is the layer of the system responsible for representing business data and logic. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_basics.html'
+  'where query':
+    'prefix': '.where query'
+    'body': '.where(${1:attribute}: ${2:expected})$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'the model - which is the layer of the system responsible for representing business data and logic. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_basics.html'
+  'where query':
+    'prefix': '.where query 2'
+    'body': '.where(${1:attribute}: ${2:expected})$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'the model - which is the layer of the system responsible for representing business data and logic. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_basics.html'

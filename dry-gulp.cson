@@ -1,0 +1,69 @@
+'.source.js':
+
+  'Gulp source ':
+    'prefix': 'gulp-src'
+    'body': """
+    // Load the plugin that provides the plugin task.
+    grunt.loadNpmTasks('${1: grunt-contrib-connect}'); $0
+    """
+    'leftLabelHTML': '<span style=\"color:red; display:inline-block; font-weight:400; font-size:1.25em \">GulpJs</span>'
+    'description': 'Gulp is a toolkit for automating painful or time-consuming tasks in your development. '
+    'descriptionMoreURL': 'https://github.com/gulpjs/gulp/blob/master/docs/API.md'
+
+  'gulp.task(name [, deps] [, fn])':
+      'prefix': 'gulp-task'
+      'body': """
+      gulp.task('${1:name}', function() {
+        $2
+      }); $0
+      """
+    'leftLabelHTML': '<span style=\"color:red; display:inline-block; font-weight:400; font-size:1.25em \">GulpJs</span>'
+    'description': 'Gulp is a toolkit for automating painful or time-consuming tasks in your development. '
+    'descriptionMoreURL': 'https://github.com/gulpjs/gulp/blob/master/docs/API.md'
+
+  'gulp.dest(path[, options])':
+    'prefix': 'gulp-dest'
+    'body': """
+      gulp.src('${1:path}')
+        .pipe(${2:pluginname})
+        .pipe(gulp.dest('${3:build}'));  // Writes ro destination => 'build/somedir/somefile.js'
+        $0
+        """
+    'leftLabelHTML': '<span style=\"color:red; display:inline-block; font-weight:400; font-size:1.25em \">GulpJs</span>'
+    'description': 'Gulp is a toolkit for automating painful or time-consuming tasks in your development. '
+    'descriptionMoreURL': 'https://github.com/gulpjs/gulp/blob/master/docs/API.md'
+
+  'gulp.src(globs[, options])':
+    'prefix': 'gulp-src'
+    'body': """
+      gulp.src('${1:path}')
+       $0
+      """
+    'leftLabelHTML': '<span style=\"color:red; display:inline-block; font-weight:400; font-size:1.25em \">GulpJs</span>'
+    'description': 'Gulp is a toolkit for automating painful or time-consuming tasks in your development. '
+    'descriptionMoreURL': 'https://github.com/gulpjs/gulp/blob/master/docs/API.md'
+
+  'gulp.watch(glob[, opts], tasks)':
+    'prefix': 'gulp-watcher'
+    'body': """
+        var watcher = gulp.watch('${1:path}', ['uglify','reload']);
+        watcher.on('change', function(event) {
+          console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        });
+       $0
+        """
+    'leftLabelHTML': '<span style=\"color:red; display:inline-block; font-weight:400; font-size:1.25em \">GulpJs</span>'
+    'description': 'Gulp is a toolkit for automating painful or time-consuming tasks in your development. '
+    'descriptionMoreURL': 'https://github.com/gulpjs/gulp/blob/master/docs/API.md'
+
+  'gulp.watch(glob[, opts], tasks)':
+    'prefix': 'gulp-watcher'
+    'body': """
+      gulp.watch('${1:path}', function(event) {
+          console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        });
+        $0
+      """
+    'leftLabelHTML': '<span style=\"color:red; display:inline-block; font-weight:400; font-size:1.25em \">GulpJs</span>'
+    'description': 'Gulp is a toolkit for automating painful or time-consuming tasks in your development. '
+    'descriptionMoreURL': 'https://github.com/gulpjs/gulp/blob/master/docs/API.md'

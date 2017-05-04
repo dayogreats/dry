@@ -1,0 +1,166 @@
+'.text.html.erb > .embedded.line.erb > .source.ruby,
+.text.html.erb > .embedded.line.erb > .embedded.end.erb,
+.text.html.ruby > .embedded,
+.text.haml > .line.ruby.haml > .source.ruby,
+.text.haml > .line.ruby.haml > .source.ruby.embedded.html,
+.embedded.ruby':
+
+# ERB ATTRITUBES
+
+  'embedded image_tag':
+    'prefix': 'image_tag'
+    'body': 'image_tag "${1:logo}"$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Embedded ruby .... '
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'embedded link_to':
+    'prefix': 'link_to'
+    'description': 'link_to(name = nil, options = nil, html_options = nil, &block)'
+    'descriptionMoreUrl': 'http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-link_to'
+    'body': 'link_to "${1:text}", ${2:"#"}, ${4:class: "${3:btn btn-primary}"}$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Embedded ruby .... '
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'embedded_fa_link':
+    'prefix': 'link_to_fa '
+    'description': "link_to(fa_icon('user'), ... )"
+    'body': 'link_to fa_icon("${1:search}"${2:, ${3:text}: "${4:Buscar}"}), ${5:"#"}'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Embedded ruby .... '
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'embedded link_to bst-tooltip':
+    'prefix': 'link_to " "'
+    'body': 'link_to "${1:text}", ${2:"#"}, ${4:class: "${3:btn btn-primary}"}, data: {toogle: :tooltip, title: "$5" }$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': "link_to( ..., data: { toggle: :tooltip, title: :title } )"
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'embedded_font_awesome_icon':
+    'prefix': 'fa_icon'
+    'body': 'fa_icon("${1:search}"${2:, text: "${3:Buscar}"})$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Embedded ruby .... '
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'embedded_number_to_currency':
+    'prefix': 'number_to_currency '
+    'body': 'number_to_currency $0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Embedded ruby .... '
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'embedded_number_to_human':
+    'prefix': 'number_to_human '
+    'body': 'number_to_human $0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Embedded ruby .... '
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'embedded_number_to_human_size':
+    'prefix': 'number_to_human_size '
+    'body': 'number_to_human_size $0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Embedded ruby .... '
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'embedded_number_to_percentage':
+    'prefix': 'number_to_percentage '
+    'body': 'number_to_percentage $0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Embedded ruby .... '
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'data attributes':
+    'prefix': 'data: {}'
+    'body': 'data: { ${1:key}: ${2:value} }$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': "data: { key: :value }"
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'data toggle-tooltip attributes':
+    'prefix': 'data: {tooltip'
+    'body': 'data: { toggle: :tooltip, title: "$1" }$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': "data: { toggle: :tooltip, title: 'title' }"
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'data turbolinks false':
+    'prefix': 'data: {turbolinks: :false }'
+    'description': "data: { turbolinks: :false }"
+    'body': 'data: { turbolinks: :${1:false} }$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Embedded ruby .... '
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'method':
+    'prefix': 'method:'
+    'body': 'method: :${1:post}$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Embedded ruby .... '
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'class key-value':
+    'prefix': 'class:'
+    'body': 'class: "${1:btn}"$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': "class: 'class'"
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'id key-value':
+    'prefix': 'id:'
+    'body': 'id: "${1:nav}"$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': "id: 'id'"
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'style key-value':
+    'prefix': 'style:'
+    'body': 'style: "${1:display: none;}"$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': "style: 'cssprop: value;'"
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'toggle key-value':
+    'prefix': 'toggle: v'
+    'body': 'toggle: ${1:tooltip}$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Embedded ruby .... '
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'title key-value':
+    'prefix': 'title:'
+    'body': 'title: ${1:hola}$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Embedded ruby .... '
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'placeholder key-value':
+    'prefix': 'placeholder'
+    'body': 'placeholder: "$1"$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': "placeholder: 'hi'"
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'turbolinks key-value':
+    'prefix': 'turbolinks:'
+    'body': 'turbolinks: :${1:false}$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'turbolinks: :false'
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'remote true key-value':
+    'prefix': 'remote:'
+    'body': 'remote: true$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'remote: true'
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
+  'toggle-tooltip key-value':
+    'prefix': 'toggle:'
+    'body': 'toggle: :tooltip, title: ${2:"${1:Hola!}"}$0'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': "toggle: :tooltip, title: 'hi'"
+    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'

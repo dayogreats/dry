@@ -1,0 +1,996 @@
+
+'.source.js':
+
+  'app.all()':
+    'prefix': 'app-all'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.all('${1:path}', function (req, res, next) { \n\t// the response \n\tres.${2:send}('${3:mesage}') \n\t\n\tnext() // pass control to the next handler \n});\n\$4"
+    "description": "This method is like the standard app.METHOD() methods, except it matches all HTTP verbs ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.all"
+
+  'app.delete()':
+    'prefix': 'app-del'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "// HTTP DELETE requests to the specified path.\napp.delete('${1:path}', function (req, res) { \n\tres.${2:send}('${3:DELETE request to homepage}');\n }); $2"
+    "description": "Routes HTTP DELETE requests to the specified path with the specified callback functions ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.delete"
+
+  'app.disable()':
+    'prefix': 'app-disable'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "// Sets the Boolean setting name to false. \napp.disable('${1:path name}'); $2 "
+    "description": "Sets the Boolean setting name to false, where name is one of the properties from the app settings table ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.disable"
+
+  'app.disabled(name)':
+    'prefix': 'app-disabled'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "// Returns true if the Boolean setting name is disabled (false). \napp.disabled('${1:name}'); $2 "
+    "description": "Returns true if the Boolean setting name is disabled (false), where name is one of the properties from the app settings table. ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.disabled"
+
+  'app.enable()':
+    'prefix': 'app-enable'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "// Sets the Boolean setting name to true. \napp.enable('${1:name}'); $2 "
+    "description": "Sets the Boolean setting name to true, where name is one of the properties from the app settings table. ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.enable"
+
+  'app.enabled(name)':
+    'prefix': 'app-enabled'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "// Returns true if the Boolean setting name is enabled (true). \napp.enabled('${1:name}'); $2 "
+    "description": "Returns true if the setting name is enabled (true), where name is one of the properties from the app settings table ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.enabled"
+
+  'app.engine(ext, callback))':
+    'prefix': 'app-engine'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "// Registers the given template engine callback as ext. \napp.engine('${1:ext}, ${2:callback}'); $3 "
+    "description": "Registers the given template engine callback as ext. ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.engine"
+
+  'app.get(path, callback )':
+    'prefix': 'app-get'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.get('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": "Routes HTTP GET requests to the specified path with the specified callback functions ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.get"
+
+  'app.post(path, callback )':
+    'prefix': 'app-post'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.post('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": "Routes HTTP POST requests to the specified path with the specified callback functions ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.post"
+
+  'app.put(path, callback )':
+    'prefix': 'app-put'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.put('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": "Routes HTTP PUT requests to the specified path with the specified callback functions. ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.put"
+
+  'app.patch(path, callback )':
+    'prefix': 'app-post'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.patch('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.head(path, callback )':
+    'prefix': 'app-head'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.head('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.checkout(path, callback )':
+    'prefix': 'app-checkout'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.checkout('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.copy(path, callback )':
+    'prefix': 'app-copy'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.copy('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.lock(path, callback )':
+    'prefix': 'app-lock'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.lock('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.search(path, callback )':
+    'prefix': 'app-search'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.search('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.merge(path, callback )':
+    'prefix': 'app-merge'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.merge('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.mkactivity(path, callback )':
+    'prefix': 'app-mkactivity'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.mkactivity('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.mkcol(path, callback )':
+    'prefix': 'app-mkcol'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.mkcol('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.move(path, callback )':
+    'prefix': 'app-move'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.move('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.m-search(path, callback )':
+    'prefix': 'app-m-search'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.m-search('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.notify(path, callback )':
+    'prefix': 'app-notify'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.notify('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.options(path, callback )':
+    'prefix': 'app-options'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.options('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.purge(path, callback )':
+    'prefix': 'app-purge'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.purge('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.report(path, callback )':
+    'prefix': 'app-report'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.report'${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.subscribe(path, callback )':
+    'prefix': 'app-subscribe'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.subscribe('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.trace(path, callback )':
+    'prefix': 'app-trace'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.trace('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.unlock(path, callback )':
+    'prefix': 'app-unlock'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.unlock('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.unsubscribe(path, callback )':
+    'prefix': 'app-unsubscribe'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.unsubscribe('${1:path}', function (req, res) {   \n\tres.${2:send}('${3:message}'); \n}); $4 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.method"
+
+  'app.param([name], callback)':
+    'prefix': 'app-param'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.param('${1:user}', function(req, res, next, ${2:id}) { \n// try to get the user details from the User model and attach it to the request object \nUser.find(${3:id}, function(err, ${4:user}) { \n\tif (err) { \n\tnext(err); \n} else if (${5:user}) { \n\treq.${6:user} = ${7:user}; \nnext(); \n} else { \n\tnext(new Error('failed to load data')); \n\t\t } \n\t }); \n}); $8"
+    "description": "Add callback triggers to route parameters, where name is the name ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.param"
+
+  'app.listen()':
+    'prefix': 'app-listen-port'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "// Server listening. \napp.listen($1); $2"
+    "description": "Binds and listens for connections on the specified host and port ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.listen"
+
+  'app.listen(port, [hostname], [callback])':
+    'prefix': 'app-listen'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "// Server listening. \napp.listen(${1:port}, function ($2) {   \n\tconsole.log('${3:log message}' + port); \n}); $4"
+    "description": "Binds and listens for connections on the specified host and port ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.listen"
+
+  'app.path()':
+    'prefix': 'app-path'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.path($1); $2"
+    "description": "Returns the canonical path of the app, a string ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.path"
+
+  'app.render(view, [locals], callback)':
+    'prefix': 'app-render'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.render('${1:template}', function(err, html){ \n\t // $2 ... \n }); $3"
+    "description": "Returns the rendered HTML of a view via the callback function ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.render"
+
+  'app.route(view, [locals], callback)':
+    'prefix': 'app-route'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.route($1); $2"
+    "description": "Returns an instance of a single route, which you can ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.route"
+
+  'app.r(view, [locals], callback)':
+    'prefix': 'appr'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.r(${1:view}); $2"
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.r"
+
+  'app.set(path, callback))':
+    'prefix': 'app-set'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.set('${1:path}, ${2:callback}'); $3 "
+    "description": "Assigns setting name to value, where name is one of the properties from the ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.set"
+
+  'app.use(path, callback))':
+    'prefix': 'app-use'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "app.use(function (req, res, next) { \n\tconsole.log('Time: %d', Date.now()); \nnext(); \n });"
+    "description": "Mounts the specified middleware function or functions at the specified path: ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.use"
+
+  'express starter':
+    'prefix': 'exp-app'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+    // add dependencies
+    var express = require('express');
+
+    //intialize express app
+    var app = express();
+
+    //server listening
+    app.listen(3000);
+    $2 """
+    "description": "Express basic app without database ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#express"
+
+  'express mvc app':
+    'prefix': 'exp-mvc'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+    // add dependencies
+    var express = require('express');
+    var bodyparser = require('body-parser');
+
+    //database
+    var mongoose = require('mongoose');
+    mongoose.connect('mongodb://localhost/myappdatabase');
+
+    //middleware
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: true }));
+
+    //intialize express app
+    var app = express();
+
+    //server listening
+    app.listen(3000);
+    $2 """
+    "description": "Quick express app with mongo database ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#express"
+
+  # REQUEST
+  'req.app':
+    'prefix': 'req-app'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.app $2"
+    "description": "This property holds a reference to the instance of the Express application that is using the middleware ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.app"
+
+  'req.body':
+    'prefix': 'req-body'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.body  $2"
+    "description": "Contains key-value pairs of data submitted in the request body ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.body"
+
+  'req.cookies()':
+    'prefix': 'req-cookies'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.cookies $2"
+    "description": "When using cookie-parser middleware, this property is an object that contains cookies sent by the request ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.cookies"
+
+  'req.baseurl':
+    'prefix': 'req-baseurl'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.baseurl $2"
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.baseurl"
+
+  'req.ip':
+    'prefix': 'req-ip'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.ip $2"
+    "description": "Contains the remote IP address of the request. ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.ip"
+
+  'req.ips':
+    'prefix': 'req-ips'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.ips $2"
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.ips"
+
+  'req.params':
+    'prefix': 'req-params'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.params $2"
+    "description": "An object containing properties mapped to the named route “parameters” ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.params"
+
+  'req.method':
+    'prefix': 'req-method'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.method $2"
+    "description": "Contains a string corresponding to the HTTP method of the request: GET, POST, PUT, and so on ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.method"
+
+  'req.fresh()':
+    'prefix': 'req-fresh'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.fresh $2"
+    "description": "Indicates whether the request is “fresh.” It is the opposite of req.stale. ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.fresh"
+
+  'req.originalUrl()':
+    'prefix': 'req-originalUrl'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.originalUrl $2"
+    "description": "This property is much like req.url; however, it retains the original request URL ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.originalUrl"
+
+  'req.protocol()':
+    'prefix': 'req-protocol'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.protocol $2"
+    "description": "Contains the request protocol string: either http or (for TLS requests) https ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.protocol"
+
+  'req.path()':
+    'prefix': 'req-path'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.path $2"
+    "description": "Contains the path part of the request URL. ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.path"
+
+  'req.query()':
+    'prefix': 'req-query'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.query $2"
+    "description": "
+This property is an object containing a property for each query string parameter in the route ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.query"
+
+  'req.route':
+    'prefix': 'req-route'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.route $2"
+    "description": "Contains the currently-matched route, a string ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.route"
+
+  'req.secure':
+    'prefix': 'req-secure'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.secure $2"
+    "description": "A Boolean property that is true if a TLS connection is established. ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.secure"
+
+  'req.stale':
+    'prefix': 'req-stale'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.stale $2"
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.stale"
+
+  'req.signedCookies':
+    'prefix': 'req-signedCookies'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.signedCookies $2"
+    "description": "this property contains signed cookies sent by the request, ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.signedCookies"
+
+  'req.xhr':
+    'prefix': 'req-xhr'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.xhr $2"
+    "description": "A Boolean property that is true if the request’s X-Requested-With header field is “XMLHttpRequest ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.xhr"
+
+  'req.subdomains':
+    'prefix': 'req-subdomains'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.subdomains $2"
+    "description": "An array of subdomains in the domain name of the request ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.subdomains"
+
+  'req.accepts(types)':
+    'prefix': 'req-accepts()'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req-accepts(${1:[types]}); $2"
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.accepts"
+
+  'req.acceptsCharsets(charset [, ...])':
+    'prefix': 'req-acceptsCharsets()'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.acceptsCharsets(${1:charset [, ...]}); $2"
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.acceptsCharsets"
+
+  'req.acceptsEncodings(encoding [, ...])':
+    'prefix': 'req-acceptsEncodings()'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.acceptsEncodings(${1:encoding [, ...]}); $2"
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.acceptsEncodings"
+
+  'req.acceptsLanguages(lang [, ...])':
+    'prefix': 'req-acceptsLanguages()'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.acceptsLanguages(${1:lang [, ...]}); $2"
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.acceptsLanguages"
+
+  'req.get()':
+    'prefix': 'req-get()'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.get(${1}); $2"
+    "description": "Returns the specified HTTP request header field (case-insensitive match) ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.get"
+
+  'req.is(type)':
+    'prefix': 'req-is()'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x))</span>"
+    'body': "req.is(${1:type}); $2"
+    "description": "Returns true if the incoming request’s “Content-Type” HTTP header field matches the MIME type specified by the type parameter. ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.is"
+
+  'req.range()':
+    'prefix': 'req-range()'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "req.range(${1:}); $2"
+    "description": "Range header parser ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req.range"
+
+# RESPONSE
+  'res.send()':
+    'prefix': 'res-send()'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "res.send('${1:message}'); $2 "
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+
+  'res.locals ':
+    'prefix': 'res-locals'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "res.locals $2"
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+
+  # METHODS
+  'res.append(field [, value])':
+    'prefix': 'res-append'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+          // th e specified value to the HTTP response header field. If the header is not already set,
+          //it creates the header with the specified value
+          res.append('Link', ['<http://localhost/>', '<http://localhost:3000/>']);
+          res.append('Warning', '199 Miscellaneous warning');
+          res.append('Set-Cookie', 'foo=bar; Path=/; HttpOnly');
+        ; $2
+        """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'res.attachment([filename])':
+    'prefix': 'res-attach'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+      // Se ts the HTTP response Content-Disposition header field to “attachment”
+      res.attachment('${1:res.attachment([filename])}');
+      // Content-Disposition: attachment; filename="logo.png"
+      // Content-Type: image/png
+    ; $2
+    """
+
+  'res.download(path [, filename] [, fn])':
+    'prefix': 'res-download'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+      // Tr ansfers the file at path as an “attachment”.
+      res.download('${1:path}', // /report-12345.pdf
+                    '${1:aliasname}',   //report.pdf
+                    function(err){
+                        if (err) {}{
+                          // Handle error, but keep in mind the response may be partially-sent
+                          // so check res.headersSent
+                        } else {
+                          // decrement a download credit, etc.
+                        }
+      });
+    ;
+    $2
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'res.cookie(name, value [, options])':
+    'prefix': 'res-cookies'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+        // Se ts cookie name to value. The options parameter is an object that can have the following properties.
+        res.cookie('${1:name}', '${2:value}', //// e.g 'rememberme', 1
+            { domain: '${3:url}',     // domain: '.example.com'
+              expires: '${4:date}',   // new Date(Date.now() + 900000
+              path: '${5:name}',      // default: '/'
+              encode: '${6:encodedUrl}', // encode: string
+              secure: '${7:false}',   // secure: true
+              signed: '${8:false}',   // signed: true
+              httpOnly: '${9:false}'  // httpOnly: true
+              maxAge: '${10:number}'  // maxAge: 900000,
+            }
+        );
+    $11
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'res.clearCookie(name [, options])':
+    'prefix': 'res-clearCookie'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+        //C lears the cookie specified by name.
+        res.cookie('name', 'tobi', { path: '/admin' });
+        res.clearCookie('${1:name}', { path: '/admin' });
+    ; $2
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'res.end([data] [, encoding])':
+    'prefix': 'res-end'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+      //End s the response process.
+      res.end();
+  $2
+  """
+  "description": " ...."
+  "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'res.format(object)':
+    'prefix': 'res-format'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+      // Pe rforms content-negotiation on the Accept HTTP header on the request object, when present.
+      res.format({
+          ${1: text}: function(){
+            res.send('hey');
+          },
+
+          ${2: html}: function(){
+            res.send('<p>hey</p>');
+          },
+
+          ${3: json} function(){
+            res.send({ message: 'hey' });
+          }
+      });
+  $4
+  """
+  "description": " ...."
+  "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'res.get(field)':
+    'prefix': 'res-get'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+        //  Returns the HTTP response header specified by field. The match is case-insensitive.
+        res.get('Content-Type');    // => "text/plain"
+  $1"""
+  "description": " ...."
+  "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'res.json([body])':
+    'prefix': 'res-json'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+        //  Sends a JSON response.
+        res.json($1);
+  $2
+  """
+  "description": " ...."
+  "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'res.jsonp([body])':
+    'prefix': 'res-jsonp'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+        //  Sends a JSON response with JSONP support.
+        res.json($1);
+  $2
+  """
+  "description": " ...."
+  "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'res.links(links)':
+    'prefix': 'res-links'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+      // Jo ins the links provided as properties of the parameter to populate the response’s Link HTTP header field.
+      res.links({
+        next: '${1:url}'
+        last: '${2:more-urls}'
+      });
+
+  $3"""
+  "description": " ...."
+  "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'res.location(path)':
+    'prefix': 'res-location'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+      // Se ts the response Location HTTP header to the specified path parameter.
+      res.location('${1:url}'); // /foo/bar
+    $2
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'res.redirect([status,] path))':
+    'prefix': 'res-redirect'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+      res.l ocation('${1:url}');
+    $2
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'res.render(view [, locals] [, callback])':
+    'prefix': 'res-render'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+      // Re nders a view and sends the rendered HTML string to the client
+      res.render('${1:view}');
+    $2
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'res.sendFile(path [, options] [, fn])':
+    'prefix': 'res-sendFile'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+      //Tra nsfers the file at the given path.
+      res.sendFile('${1:path}', ${2:options}, ${3: function} );
+    $2
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'res.sendStatus(statusCode)':
+    'prefix': 'sendStatus'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+      // Se ts the response HTTP status code to statusCode and send its string representation as the response body.
+      res.sendStatus(200); // equivalent to res.status(200).send('OK')
+    $2
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'res.set(field [, value])':
+    'prefix': 'res-set'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+      //Set s the response’s HTTP header field to value. To set multiple fields at once, pass an object as the parameter.
+      res.set({
+        '${1:Content-Type': 'text/plain}',
+        '${2:Content-Length': '123}',
+        '${3:ETag': '12345}'
+      });
+    $4
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'res.status()':
+    'prefix': 'res-status'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+        //  Sets the HTTP status for the response. It is a chainable alias of Node’s response.statusCode.
+        res.status({1:code});
+    $2
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+
+  'res.type(type)':
+    'prefix': 'res-type'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+    // Sets  the Content-Type HTTP header to the MIME type.
+    res.type('${1:type}');  // e.g html
+    $2
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'res.vary(field)':
+    'prefix': 'res-vary'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+      // Ad ds the field to the Vary response header, if it is not there already.
+      res.vary('${1:User-Agent}').render('docs');
+    $2
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+
+# ROUTER
+  'router.all(path, [callback, ...] callback)':
+    'prefix': 'router-all'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+        // This method is just like the router.METHOD() methods, except that it matches all HTTP methods (verbs).
+        router.all('${1:*}', function(req, res, next){
+          res.${2:send}('${3:hello world}');
+          next($4);
+        });
+    $5
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'router.get()':
+    'prefix': 'router-get'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+       router.get('${1:url}', function(req, res){
+         ${2:res.send('hello world')};
+       });
+    $3
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'router.get()':
+    'prefix': 'router-get'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+       router.get('${1:url}', function(req, res){
+         ${2:res.send('hello world')};
+       });
+    $3
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'router.put()':
+    'prefix': 'router-put'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+       router.put('${1:url}', function(req, res){
+         ${2:res.send('hello world')};
+       });
+    $3
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'router.patch()':
+    'prefix': 'router-patch'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+       router.patch('${1:url}', function(req, res){
+         ${2:res.send('hello world')};
+       });
+    $3
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'router.post()':
+    'prefix': 'router-post'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+       router.post('${1:url}', function(req, res){
+         ${2:res.send('hello world')};
+       });
+    $3
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'router.delete()':
+    'prefix': 'router-delete'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+       router.delete('${1:url}', function(req, res){
+         ${2:res.send('hello world')};
+       });
+    $3
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#res"
+
+  'router.use([path], [function, ...] function)':
+    'prefix': 'router-set'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+       // a lways invoked this middleware
+        router.use('${1:path}', function(req, res, next) {
+          ${2:res.send('Hello World')};
+        });
+    $3
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.listen"
+
+  'router.route([path], [function, ...] function)':
+    'prefix': 'router-route'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+        rou ter.route('${1:path}')
+        .all(function(req, res, next) {
+          // runs for all HTTP verbs first
+          // think of it as route specific middleware!
+          next();
+        })
+    $3
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.listen"
+
+  'router.param()':
+    'prefix': 'router-param'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+      route r.param('${1:user}', function(req, res, next, ${2:id}) {
+
+      // try to get the user details from the User model and attach it to the request object
+      User.find(${3:id}, function(err, ${4:user}) {
+        if (err) {
+            next(err);
+          } else if (${5:user}) {
+            req.${6:user} = ${7:user};
+            next();
+          } else {
+            next(new Error('failed to load data'));
+          }
+        });
+      });
+    $8
+    """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.listen"
+
+
+
+
+
+  # BODY-PARSER
+  'require("body-parser")':
+    'prefix': 'bodyparser'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': 'var bodyParser = require("body-parser"); $1'
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.listen"
+
+  'bodyParser.json(options)':
+    'prefix': 'body-json'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "bodyParser.json({}); $1"
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.listen"
+
+  'bodyParser.raw(options)':
+    'prefix': 'body-raw'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "bodyParser.raw({}); $1"
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.listen"
+
+  'bodyParser.urlencoded(options)':
+    'prefix': 'body-urlEncoded'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "bodyParser.urlEncoded({}); $1"
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.listen"
+
+  'bodyParser.text(options)':
+    'prefix': 'body-text'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "bodyParser.text({}); $1"
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.listen"
+
+  'bodyParser.text(options)':
+    'prefix': 'body-text'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "bodyParser.text({}); $1"
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.listen"
+
+  'bodyParser.text(options)':
+    'prefix': 'body-text'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "bodyParser.text({}); $1"
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.listen"
+
+  'bodyParser.text(options)':
+    'prefix': 'body-text'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': "bodyParser.text({}); $1"
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#api.listen"
+
+  # BODY PARSER
+
+  'body parser full file':
+    'prefix': 'r#basic'
+    "leftLabelHTML": "<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Exp(4.x)</span>"
+    'body': """
+      var app =  require('express')();
+      var bodyParser = require('body-parser');
+      var multer = require('multer'); // v1.0.5
+      var upload = multer(); // for parsing multipart/form-data
+
+      app.use(bodyParser.json()); // for parsing application/json
+      app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
+      app.post('/profile', upload.array(), function (req, res, next) {
+        console.log(req.body);
+        res.json(req.body);
+      });
+
+        """
+    "description": " ...."
+    "descriptionMoreURL": "http://expressjs.com/en/api.html#req."

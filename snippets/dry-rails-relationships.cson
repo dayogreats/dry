@@ -1,0 +1,59 @@
+'.source.ruby, .source.ruby.rails .meta.rails.model':
+
+# ACTIVE RELATIONSHIP
+
+  'has_many':
+    'prefix': 'has_many :'
+    'body': 'has_many :${1:categories}'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'An association is a connection between two Active Record models. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/association_basics.html '
+
+  'has_many_depedent':
+    'prefix': 'has_many_depedent :'
+    'body': 'has_many :${1:categories}, dependent: ${2:destroy}'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'An association is a connection between two Active Record models. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/association_basics.html '
+
+  'has_one':
+    'prefix': 'has_one :'
+    'body': 'has_one :${1:category}'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'An association is a connection between two Active Record models. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/association_basics.html '
+
+  'has_many_through':
+    'prefix': 'has_many_through :'
+    'body': 'has_many :${1:categories}, through: :${2:categorizations}'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'An association is a connection between two Active Record models. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/association_basics.html '
+
+  'has_and_belongs_to_many':
+    'prefix': 'has_and_belongs_to_many :'
+    'body': 'has_and_belongs_to_many :${1:categories}, join_table: "${2:categories_products}"$3'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'An association is a connection between two Active Record models. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/association_basics.html '
+
+  'accepts_nested_attributes_for':
+    'prefix': 'accepts_nested_attributes_for :'
+    'body': 'accepts_nested_attributes_for :${1:relationship}${2:, allow_destroy\: true}$3'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'An association is a connection between two Active Record models. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/association_basics.html '
+
+  'belongs_to':
+    'prefix': 'belongs_to :'
+    'body': 'belongs_to :${1:category}${2:, dependent: ${3::destroy}}'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'An association is a connection between two Active Record models. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/association_basics.html '
+
+  'belongs_to_polymorphic':
+    'prefix': 'belongs_to_polymorphic :'
+    'body': 'belongs_to :${1:category}, polymorphic: true'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'An association is a connection between two Active Record models. '
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/association_basics.html '

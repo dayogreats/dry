@@ -1,0 +1,13 @@
+'.source.ruby':
+  
+# TASK
+  'task with environment':
+    'prefix': 'task'
+    'body': """
+      task ${1:task_name}:${2: :environment} do ${2:|t|}
+        ${3:#task code...}
+      end
+      """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
+    'description': 'Task'
+    'descriptionMoreURL': 'http://guides.rubyonrails.org/ '
