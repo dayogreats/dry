@@ -1,6 +1,6 @@
 {
   "name": "dry",
-  "version": "4.5.0",
+  "version": "4.6.0",
   "main": "./snippets",
   "description": "A collection of snippets covering all of expressjs, socket.io, passportjs, electron,  and body-parser APIs.",
   "keywords": [
