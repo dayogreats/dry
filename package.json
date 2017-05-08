@@ -4,22 +4,22 @@
   "main": "./snippets",
   "description": "A collection of snippets covering all of ExpressJs, Body-Parser APIs, GulgJs, GruntJs, React, EmberJs and Ruby on Rails, Rspec.",
   "keywords": [
-    "Atom",
-    "Nodejs",
-    "Electron",
-    "ExpressJs",
-    "body-parser",
-    "snippets",
-    "js",
-    "template",
-    "ECS6",
-    "coffee",
     "rspec",
     "ruby on rails",
     "react",
     "emberjs",
     "gulpjs",
-    "gruntjs"
+    "gruntjs",
+    "ExpressJs",
+    "Nodejs",
+    "body-parser",
+    "Electron",
+    "snippets",
+    "js",
+    "template",
+    "ECS6",
+    "coffee"
+
   ],
   "repository": {
     "type": "git",
