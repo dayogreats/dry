@@ -1,8 +1,8 @@
 # DRY(DON'T REPEAT YOURSELF)
 
-A collection of snippets covering all of [expressjs](http://expressjs.com/), [ruby on rails](http://rubyonrails.org/), [emberjs](http://emberjs.com/), [electron](http://electron.atom.io/),  and [body-parser](https://github.com/expressjs/body-parser) APIs.
+A collection of snippets covering all of [expressjs](http://expressjs.com/), [ruby on rails](http://rubyonrails.org/), [emberjs](http://emberjs.com/), [electron](http://electron.atom.io/), rspec, react](https://facebook.github.io/react/) and [body-parser](https://github.com/expressjs/body-parser) APIs.
 
-There is no need to remember any shortcode. Just write you codes in any of the supported frameworks/languages and watch dry do it job.
+There is no need to remember any short-code. Just write you codes in any of the supported frameworks/languages and watch dry do it job.
 ## Notes
 
 * In software engineering, Don't Repeat Yourself (DRY) is a principle of software development, aimed at reducing repetition of information of all kinds, especially useful in multi-tier architectures.
@@ -15,28 +15,16 @@ There is no need to remember any shortcode. Just write you codes in any of the s
 Thanks!
 
 #FEATURES
-+ Full expressjs 4.x api documentation
++ Full react, emberjs, grunt, gulpjs, expressjs 4.x api documentation
 + LeftLabel color added to the prefix(es)
 + Express version indicated to show current support version
 + Footer comments added
-+ Read more the Apis online documentation
++ Documentation Read more online link
 
 # TODO
 1. Add electron support
-2. Add emberjs
-3. Add gruntjs
-
 
 #USAGE
 
-
-
-| dash notation       | prefix          | expansion |
-| ------------- |:-------------:| -----:|
-| -      | app- |  |
-| -      | res-      |    |
-| -| req-     |    will expand to mvc template with db basic |
-| -| exp-app    |    will expand to mvc template with db basic |
-| -| exp-mvc     |    will expand to mvc template with db basic |
 
 ![1483039032972.gif](https://github.com/dayogreats/dry/blob/master/screenshoots/1483039032972.gif)
