@@ -2,7 +2,7 @@
   "name": "dry",
   "version": "4.6.0",
   "main": "./snippets",
-  "description": "A collection of snippets covering all of expressjs, socket.io, passportjs, electron,  and body-parser APIs.",
+  "description": "A collection of snippets covering all of expressjs, body-parser APIs, emberjs, react, ruby on rails and rspec.",
   "keywords": [
     "Atom",
     "Nodejs",
