@@ -2,14 +2,14 @@
 
 # LOGGER
   'logger.debug':
-    'prefix': 'log.debug'
+    'prefix': 'log-debug'
     'body': 'Rails.logger.debug { "${1:message}" }'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">RailsLogger</span>'
     'description': 'Rails makes use of the ActiveSupport::Logger class to write log information. Other loggers, such as Log4r, may also be substituted. '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger '
 
   'logger.info':
-    'prefix': 'logger.info'
+    'prefix': 'logger-info'
     'body': 'Rails.logger.info { "${1:message}" }'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">RailsLogger</span>'
     'description': 'Rails makes use of the ActiveSupport::Logger class to write log information. Other loggers, such as Log4r, may also be substituted. '
@@ -17,7 +17,7 @@
     'descriptionMoreURL': 'http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger '
 
   'logger.error':
-    'prefix': 'logger.error'
+    'prefix': 'logger-error'
     'body': 'Rails.logger.info { "${1:message}" }'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">RailsLogger</span>'
     'description': 'Rails makes use of the ActiveSupport::Logger class to write log information. Other loggers, such as Log4r, may also be substituted. '

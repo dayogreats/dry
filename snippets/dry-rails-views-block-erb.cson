@@ -16,7 +16,7 @@
 #
 
   'embedded each':
-    'prefix': '.each'
+    'prefix': 'each'
     'body': """
       .each do |${1:member}| %>
         <%= ${1:member} $2 %>
@@ -25,6 +25,7 @@
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Web requests are handled by Action Controller and Action View. '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/action_view_overview.html '
+
   'embedded block':
     'prefix': 'do'
     'body': """
@@ -35,8 +36,9 @@
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Web requests are handled by Action Controller and Action View. '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/action_view_overview.html '
-  'embedded block with parm':
-    'prefix': 'block-para'
+
+  'embedded block with param':
+    'prefix': 'block-param'
     'body': """
       do |${1:member}| %>
         <%= ${1:member}$2 %>

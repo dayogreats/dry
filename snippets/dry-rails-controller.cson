@@ -7,6 +7,7 @@
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails</span>'
     'description': 'the Controller is responsible for orchestrating the whole process of handling a request in Rails '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/layouts_and_rendering.html'
+
   'respond_to':
     'prefix': 'respond_to'
     'body': """
@@ -18,36 +19,42 @@
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails</span>'
     'description': 'the Controller is responsible for orchestrating the whole process of handling a request in Rails '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/layouts_and_rendering.html'
+
   'skip_before_action':
     'prefix': 'skip_before_action'
     'body': 'skip_before_action :${1:method_name}, only: [:${2:index}]'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails</span>'
     'description': 'the Controller is responsible for orchestrating the whole process of handling a request in Rails '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/layouts_and_rendering.html'
+
   'skip_after_action':
     'prefix': 'skip_after_action'
     'body': 'skip_after_action :${1:method_name}, only: [:${2:index}]'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails</span>'
     'description': 'the Controller is responsible for orchestrating the whole process of handling a request in Rails '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/layouts_and_rendering.html'
+
   'before_action':
     'prefix': 'before_action'
     'body': 'before_action :${1:method_name}, only: [:${2:index}]'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails</span>'
     'description': 'the Controller is responsible for orchestrating the whole process of handling a request in Rails  '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/layouts_and_rendering.html'
+
   'after_action':
     'prefix': 'after_action'
     'body': 'after_action :${1:method_name}, only:[:${2:index}]'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails</span>'
     'description': 'the Controller is responsible for orchestrating the whole process of handling a request in Rails '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/layouts_and_rendering.html'
+
   'render_partial':
     'prefix': 'render_partial'
     'body': 'render "${1:action}"'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Rails</span>'
     'description': 'the Controller is responsible for orchestrating the whole process of handling a request in Rails '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/layouts_and_rendering.html'
+
   'params_whitelist':
     'prefix': 'params_whitelist'
     'body': """

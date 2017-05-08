@@ -1,0 +1,588 @@
+'.source.ruby.rspec':
+
+  'RSpec: describe (String)':
+    'prefix': 'describe'
+    'body': "describe '${1:subject}' do\n  $0\nend"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: describe (type)':
+    'prefix': 'describe-type'
+    'body': 'describe ${1:Type} do\n  $0\nend'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: describe (type, string)':
+    'prefix': 'describe-type-string '
+    'body': "describe ${1:Type}, '${2:description}' do\n  $0\nend"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: it (does something)':
+    'prefix': 'it'
+    'body': "it '${1:does something}'${2: do\n  $0\nend}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: it (should do something)':
+    'prefix': 'it-should'
+    'body': "it { should ${1:matcher} }"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: it (is expected to do something)':
+    'prefix': 'it-is-expected'
+    'body': "it { is_expected.to ${1:matcher} }"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: Matcher (Custom)':
+    'prefix': 'matcher'
+    'body': """
+      class ${1:ReverseTo}
+
+          def initialize($3)
+             @$3 = $3
+          end
+          def matches?(actual)
+              @actual = actual   # Satisfy expectation here. Return false or raise an error if it\'s not met.
+                  ${0:@actual.reverse.should == @$3}
+                     true
+          end
+
+          def failure_message_for_should
+             "expected #{@actual.inspect} to $2 #{@$3.inspect}, but it didn\'t"
+          end
+
+          def failure_message_for_should_not
+              "expected #{@actual.inspect} not to $2 #{@$3.inspect}, but it did"
+          end
+      end
+      def ${2:reverse_to}(${3:expected})
+        $1.new($3)
+      end
+      """
+
+  'RSpec: Matcher (DSL)':
+    'prefix': 'Matchers'
+    'body': 'RSpec::Matchers.define :${1:name} do |${2:expected}|\n  match do |${3:actual}|\n    $3.$1?($2)\n  end\nend\n'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: Require spec_helper':
+    'prefix': 'require-spec'
+    'body': 'require \'spec_helper\'\n\n'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: Require rails_helper':
+    'prefix': 'require-helper'
+    'body': 'require \'rails_helper\'\n\n'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: controller_name':
+    'prefix': 'controller_name'
+    'body': 'controller_name :${1:controller}'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: and_raise':
+    'prefix': 'and_raise'
+    'body': 'and_raise(${1:exception})'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: and_return with block':
+    'prefix': 'and_return'
+    'body': 'and_return { $1 }'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: and_return with args':
+    'prefix': 'and_return-value'
+    'body': 'and_return(${1:value})'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: and_throw':
+    'prefix': 'and_throw'
+    'body': 'and_throw(${1:sym})'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: and_yield':
+    'prefix': 'any_yield'
+    'body': 'and_yield(${1:values})'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: any_number_of_times':
+    'prefix': 'any_number_of_times'
+    'body': 'any_number_of_times'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'at_least':
+    'prefix': 'at_least'
+    'body': 'at_least(${1:n}).times'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'at_most':
+    'prefix': 'at_most'
+    'body': 'at_most(${1:n}).times'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: change':
+    'prefix': 'change'
+    'body': 'change { $1 }'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: configure':
+    'prefix': 'configure'
+    'body': 'RSpec.configure do |config|\n  config.$0\nend'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: context':
+    'prefix': 'context :'
+    'body': "context '${1:context}' do\n  $0\nend"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: describe (Controller)':
+    'prefix': 'describe '
+    'body': 'require File.expand_path(File.dirname(__FILE__) + \'/../spec_helper\')\n\ndescribe ${1:controller} do\n  $0\nend'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: describe (RESTful Controller)':
+    'prefix': 'describe-restful-controller'
+    'body': "describe ${1:controller}, '${2:GET|POST|PUT|DELETE} ${3:/some/path}${4: with some parameters}' do\n  $0\nend"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: exactly':
+    'prefix': 'exactly'
+    'body': 'exactly(${1:n}).times'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: expect':
+    'prefix': 'expect'
+    'body': 'expect(${1:subject}).${2:not_}to ${3:${4:eq} ${5:object}}'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: expect with block':
+    'prefix': 'expect-with-block'
+    'body': 'expect { ${1:target} }.${2:not_}to ${3:raise_error}'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: feature':
+    'prefix': 'scenario :'
+    'body': "scenario '${1:scenario description}' do\n  $0\nend"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: it (should do something)':
+    'prefix': 'it-shoud'
+    'body': "it 'should ${1:do something}'${2: do\n  $0\nend}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: let':
+    'prefix': 'let'
+    'body': 'let(:${1:instance}) { $0 }'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: mock':
+    'prefix': 'mock'
+    'body': "${1:var} = mock('${2:mock_name}'${3:, :null_object => true})\n$0"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: mock_model':
+    'prefix': 'mock_model'
+    'body': 'mock_model(${1:model})$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: mock_with':
+    'prefix': 'mock_with'
+    'body': 'RSpec::Runner.configure do |config|\n\tconfig.mock_with :${0:mocha|flexmock|rr}\nend'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: once':
+    'prefix': 'once'
+    'body': 'once'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should be_success':
+    'prefix': 'should'
+    'body': 'response.should be_success\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should_not be_success':
+    'prefix': 'should_not'
+    'body': 'response.should_not be_success\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: before':
+    'prefix': 'before'
+    'body': 'before(${1::each}) do\n  $0\nend'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should ==':
+    'prefix': 'should=='
+    'body': '${1:target}.should == ${2:value}\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should =~':
+    'prefix': 'should=~'
+    'body': '${1:target}.should =~ /${2:regexp}/\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should eql':
+    'prefix': 'should-eql'
+    'body': '${1:target}.should eql(${2:value})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should be':
+    'prefix': 'should-be'
+    'body': '${1:target}.should be(${2:result})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should be_kind_of':
+    'prefix': 'should-be_a_kind_of'
+    'body': '${1:target}.should be_a_kind_of(${2:klass})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should be_instance_of':
+    'prefix': 'should-be_instance_of'
+    'body': '${1:target}.should be_instance_of(${2:klass})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should be_close':
+    'prefix': 'should-be_close'
+    'body': '${1:target}.should be_close(${2:result}, ${3:tolerance})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should be_redirect':
+    'prefix': 'should-be_redirect'
+    'body': 'response.should be_redirect\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should equal':
+    'prefix': 'should-equal'
+    'body': '${1:target}.should equal(${2:value})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should have':
+    'prefix': 'should-have'
+    'body': '${1:target}.should have(${2:num}).${3:things}\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should have_at_least':
+    'prefix': 'should-have_at_least'
+    'body': '${1:target}.should have_at_least(${2:num}).${3:things}\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'should have_at_most':
+    'prefix': 'should-have_at_most'
+    'body': '${1:target}.should have_at_most(${2:num}).${3:things}\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should have_records':
+    'prefix': 'should-have_records'
+    'body': '${1:target}.should have(${2:x}).records\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should match':
+    'prefix': 'should-match'
+    'body': '${1:target}.should match(/${2:regexp}/)\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should_not ==':
+    'prefix': 'should_not'
+    'body': '${1:target}.should_not == ${2:value}\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should_not =~':
+    'prefix': 'should_not=~'
+    'body': '${1:target}.should_not =~ /${2:regexp}/\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should_not eql':
+    'prefix': 'should_not-eql'
+    'body': '${1:target}.should_not eql(${2:value})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should_not be':
+    'prefix': 'should_not-be'
+    'body': '${1:target}.should_not be(${2:result})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should_not be_kind_of':
+    'prefix': 'should_not be_kind_of'
+    'body': '${1:target}.should_not be_a_kind_of(${2:klass})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should_not be_instance_of':
+    'prefix': 'should_not-be_instance_of'
+    'body': '${1:target}.should_not be_instance_of(${2:klass})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should_not be_close':
+    'prefix': 'should_not-be_close'
+    'body': '${1:target}.should_not be_close(${2:result}, ${3:tolerance})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should_not-be_redirect':
+    'prefix': 'should_not be_redirect'
+    'body': 'response.should_not be_redirect\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should_not-equal':
+    'prefix': 'should_not equal'
+    'body': '${1:target}.should_not equal(${2:value})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should_not match':
+    'prefix': 'should_not-match'
+    'body': '${1:target}.should_not match(/${2:regexp}/)\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should_not predicate':
+    'prefix': 'should_not:'
+    'body': '${1:target}.should_not ${2:be_${3:predicate}} $4\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should_not raise_error':
+    'prefix': 'should_not raise_error'
+    'body': 'lambda { $1 }.should_not raise_error(${2:error})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should_not_receive':
+    'prefix': 'should_not_receive'
+    'body': '${1:mock}.should_not_receive(:${2:message})$3\n$0\n'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should_not respond_to':
+    'prefix': 'should_not-respond_to'
+    'body': '${1:target}.should_not respond_to(:${2:sym})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should_not satisfy':
+    'prefix': 'should_not-satisfy'
+    'body': '${1:target}.should_not satisfy { |obj| $2 }\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should_not throw':
+    'prefix': 'should_not-throw_symbol'
+    'body': 'lambda { $1 }.should_not throw_symbol(:${2:symbol})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should predicate':
+    'prefix': 'should-predicate'
+    'body': '${1:target}.should ${2:be_${3:predicate}} $4\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should raise_error':
+    'prefix': 'raise_error'
+    'body': 'lambda { $1 }.should raise_error(${2:error})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should_receive':
+    'prefix': 'should_receive'
+    'body': '${1:mock}.should_receive(:${2:message})$3'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: with args':
+    'prefix': 'with-arrs'
+    'body': 'with(${1})$2'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should redirect_to':
+    'prefix': 'redirect_to'
+    'body': 'response.should redirect_to(${1:url})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should render_template':
+    'prefix': 'render_template'
+    'body': 'response.should render_template(:${1:template})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should respond_to':
+    'prefix': 'respond_to'
+    'body': '${1:target}.should respond_to(:${2:sym})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should satisfy':
+    'prefix': 'satisfy'
+    'body': '${1:target}.should satisfy { |obj| $2 }\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: should throw':
+    'prefix': 'throw_symbol'
+    'body': 'lambda { $1 }.should throw_symbol(:${2:symbol})\n$0'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: specify':
+    'prefix': 'specify :'
+    'body': 'specify { ${1:behavior} }'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: stub':
+    'prefix': 'stub'
+    'body': '${1:double}.stub(:${2:message})$3'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: subject':
+    'prefix': 'subject'
+    'body': 'subject(:${1:instance}) { $0 }'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: after':
+    'prefix': 'after'
+    'body': 'after(${1::each}) do\n  $0\nend'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'
+
+  'RSpec: twice':
+    'prefix': 'twice'
+    'body': 'twice'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>RSpec</span>"
+    'description': 'RSpec helps you to test your ruby app'
+    'descriptionMoreURL': 'http://rspec.info/documentation/'

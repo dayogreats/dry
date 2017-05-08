@@ -1,0 +1,213 @@
+# /////////////////////////////////////
+#   handlebars
+# /////////////////////////////////////
+
+'.text.html.handlebars':
+
+  'Handlebars: helper':
+    'prefix': 'helper'
+    'body': "{{${1:get} '${2}'}}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>Handlebars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+  'Handlebars: closure helper':
+    'prefix': 'closure-helper'
+    'body': "(${1:get} '${2}')"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+  'Handlebars: action':
+    'prefix': 'action'
+    'body': "{{action '${1:actionName}' ${2:argument}}}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+  'Handlebars: #each/else':
+    'prefix': 'each-else'
+    'body': """
+      {{#each ${1} as |${2}|}}
+        ${3}
+      {{else}}
+        ${4}
+      {{/each}}
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+  "Ember: component":
+    'prefix': 'component'
+    'body': """
+      {{#${1} ${2:as |${3:yielded}|}}}
+        ${4}
+      {{/${1}}}
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+
+
+
+
+
+
+  'Handlebars: Log Helper':
+    'prefix': 'log'
+    'body': """
+      {{log ${1:value}}}
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+  'Handlebars: Debug Helper':
+    'prefix': 'debug'
+    'body': """
+      {{debugger}}
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+  'Handlebars: Escape':
+    'prefix': 'escape'
+    'body': """
+      {{{${1:value}}}}
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+  'Handlebars: Each':
+    'prefix': 'each'
+    'body': """
+      {{#each ${1:${2:item} ${3:in ${4:value}}}}}
+        ${5}
+      {{/each}}
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+  'Handlebars: Each As':
+    'prefix': 'each-as'
+    'body': """
+      {{#each ${1:${2:item} ${3:as |${4:value}|}}}}
+        ${5}
+      {{/each}}
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+  'Handlebars: Each In':
+    'prefix': 'each-in'
+    'body': """
+      {{#each-in ${1:${2:item} ${3:as |${4:value}|}}}}
+        ${5}
+      {{/each-in}}
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+  'Handlebars: Get':
+    'prefix': 'get'
+    'body': """
+      {{get ${1:${2:item} ${3:value}}}}
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+  'Handlebars: List':
+    'prefix': 'list'
+    'body': """
+      {{#list ${1:items}}}
+        ${2}
+      {{/list}}
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+  'Handlebars: If':
+    'prefix': 'if'
+    'body': """
+      {{#if ${1:bool}}}
+        $2
+      {{/if}}
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+  'Handlebars: Else':
+    'prefix': 'else'
+    'body': '{{else}}${1}'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+  'Handlebars: If/Else Block':
+    'prefix': 'if-else'
+    'body': """
+      {{#if ${1:bool}}}
+        ${2}
+      {{else}}
+        ${3}
+      {{/if}}
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+  'Handlebars: Unless':
+    'prefix': 'unless'
+    'body': """
+      {{#unless ${1: item}}}
+        ${2}
+      {{/unless}}
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+  'Handlebars: Unless/Else':
+    'prefix': 'unless-else'
+    'body': """
+      {{#unless ${1:bool}}}
+        ${2}
+      {{else}}
+        ${3}
+      {{/unless}}
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+  'Handlebars: With Block':
+    'prefix': 'with'
+    'body': """
+      {{#with ${1:item} ${2:as ${3:|${4:value}|}}}}
+        ${5}
+      {{/with}}
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'
+
+  'Handlebars: Link-to':
+    'prefix': 'link-to'
+    'body': """
+      {{#link-to '${1:destination}'}}
+        ${2}
+      {{/link-to}}
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>HandleBars</span>"
+    'description': 'Handlebars lets you build semantic templates effectively with no frustration. '
+    'descriptionMoreURL': 'http://handlebarsjs.com'

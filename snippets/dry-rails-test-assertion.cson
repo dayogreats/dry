@@ -1,6 +1,4 @@
 '.source.ruby, .source.ruby.rails':
-
-
 # TEST
   'it':
     'prefix': 'it'
@@ -12,6 +10,7 @@
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Rails creates a test directory for you as soon as you create a Rails project using rails new application_name. '
     'descriptionMoreURL': 'guides.rubyonrails.org/testing.html'
+
   'describe':
     'prefix': 'describe'
     'body': """
@@ -22,6 +21,7 @@
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Rails creates a test directory for you as soon as you create a Rails project using rails new application_name. '
     'descriptionMoreURL': 'guides.rubyonrails.org/testing.html'
+
   'context':
     'prefix': 'context'
     'body': """
@@ -32,6 +32,7 @@
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Rails creates a test directory for you as soon as you create a Rails project using rails new application_name. '
     'descriptionMoreURL': 'guides.rubyonrails.org/testing.html'
+
   'test case':
     'prefix': 'test'
     'body': """
@@ -42,32 +43,37 @@
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Rails creates a test directory for you as soon as you create a Rails project using rails new application_name. '
     'descriptionMoreURL': 'guides.rubyonrails.org/testing.html'
+
   'assert':
-    'prefix': 'ast'
+    'prefix': 'assert'
     'body': 'assert ${1:true}${2:, "${3:expected ${1:true} to be true}"}'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Rails creates a test directory for you as soon as you create a Rails project using rails new application_name. '
     'descriptionMoreURL': 'guides.rubyonrails.org/testing.html'
+
   'assert_not':
-    'prefix': 'astn'
+    'prefix': 'assert_not'
     'body': 'assert_not ${1:false}'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Rails creates a test directory for you as soon as you create a Rails project using rails new application_name. '
     'descriptionMoreURL': 'guides.rubyonrails.org/testing.html'
+
   'assert_equal':
-    'prefix': 'ase'
+    'prefix': 'assert_equal'
     'body': 'assert_equal ${1:expected}, ${2:actual}${3:, "${4:expected}"}'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Rails creates a test directory for you as soon as you create a Rails project using rails new application_name. '
     'descriptionMoreURL': 'guides.rubyonrails.org/testing.html'
+
   'assert_in_delta':
-    'prefix': 'asde'
+    'prefix': 'assert_in_delta'
     'body': 'assert_in_delta ${1:expected_float}, ${2:actual_float}, ${3:delta}, "${4:float didn\'t matched}"$0'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Rails creates a test directory for you as soon as you create a Rails project using rails new application_name. '
     'descriptionMoreURL': 'guides.rubyonrails.org/testing.html'
+
   'assert_difference':
-    'prefix': 'asd'
+    'prefix': 'assert_difference'
     'body': """
       assert_difference("${1:User.count}") do
         $2
@@ -76,8 +82,9 @@
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Rails creates a test directory for you as soon as you create a Rails project using rails new application_name. '
     'descriptionMoreURL': 'guides.rubyonrails.org/testing.html'
+
   'assert_no_difference':
-    'prefix': 'asnd'
+    'prefix': 'assert_no_difference'
     'body': """
       assert_no_difference("${1:User.count}") do
         $2
@@ -86,14 +93,16 @@
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Rails creates a test directory for you as soon as you create a Rails project using rails new application_name. '
     'descriptionMoreURL': 'guides.rubyonrails.org/testing.html'
+
   'assert_response':
-    'prefix': 'asre'
+    'prefix': 'assert_response'
     'body': 'assert_response :${1:success}'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Rails creates a test directory for you as soon as you create a Rails project using rails new application_name. '
     'descriptionMoreURL': 'guides.rubyonrails.org/testing.html'
+
   'assert_redirected_to':
-    'prefix': 'asr'
+    'prefix': 'assert_redirected_to'
     'body': 'assert_redirected_to ${1:users}_path$0'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Rails creates a test directory for you as soon as you create a Rails project using rails new application_name. '

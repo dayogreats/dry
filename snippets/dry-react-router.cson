@@ -1,0 +1,129 @@
+'.source.js':
+
+  'React Router: router skeleton':
+    'prefix': 'require react-router'
+    'body': """
+      import React from 'react';
+      import ReactDOM from 'react-dom';
+      import Router from 'react-router';
+      let { Route, DefaultRoute, NotFoundRoute, browserHistory } = Router;
+
+      // -- Import components
+      import ${1:App} from '${2}';
+      ReactDOM.render((
+        <Router history={browserHistory}>
+          <Route handler={${1:App}} path='/'>
+            ${3}
+          </Route>
+        </Router>
+      ), document.${3:getElementById('${4:app}')});
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Router</span>"
+    'description': 'Declarative routing for React.'
+    'descriptionMoreURL': 'https://www.npmjs.com/package/react-router'
+
+  'React Router: <Route />':
+    'prefix': 'route-path'
+    'body': "<Route path='${1}' component={${2}} />"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Router</span>"
+    'description': 'Declarative routing for React.'
+    'descriptionMoreURL': 'https://www.npmjs.com/package/react-router'
+
+  'React Router: Nested <Route></Route>':
+    'prefix': 'route-nested'
+    'body': """
+      <Route path='${1}' component={${2}}>
+        ${5}
+      </Route>
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Router</span>"
+    'description': 'Declarative routing for React.'
+    'descriptionMoreURL': 'https://www.npmjs.com/package/react-router'
+
+  'React Router: <Redirect />':
+    'prefix': 'Redirect'
+    'body': '<Redirect from=\'${1}\' to=\'${2}\' />'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Router</span>"
+    'description': 'Declarative routing for React.'
+    'descriptionMoreURL': 'https://www.npmjs.com/package/react-router'
+
+  'React Router: <NotFoundRoute />':
+    'prefix': 'NotFoundRoute'
+    'body': '<NotFoundRoute component={${1}}/>'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Router</span>"
+    'description': 'Declarative routing for React.'
+    'descriptionMoreURL': 'https://www.npmjs.com/package/react-router'
+
+  'React Router: <DefaultRoute />':
+    'prefix': 'DefaultRoute'
+    'body': '<DefaultRoute component={${1}} />'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Router</span>"
+    'description': 'Declarative routing for React.'
+    'descriptionMoreURL': 'https://www.npmjs.com/package/react-router'
+
+  'React Router: <Link />':
+    'prefix': 'Link'
+    'body': '<Link to={pathname: \'${1}\'${3:, query: \\{${4}\\}}${5:, hash: \'${6}\'}${7:, state: \\{${8}\\}}}>${9}</Link>'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Router</span>"
+    'description': 'Declarative routing for React.'
+    'descriptionMoreURL': 'https://www.npmjs.com/package/react-router'
+
+  'React Router: onEnter={}':
+    'prefix': 'onEnter'
+    'body': 'onEnter={${1}}'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Router</span>"
+    'description': 'Declarative routing for React.'
+    'descriptionMoreURL': 'https://www.npmjs.com/package/react-router'
+
+  'React Router: onLeave={}':
+    'prefix': 'onLeave'
+    'body': 'onLeave={${1}}'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Router</span>"
+    'description': 'Declarative routing for React.'
+    'descriptionMoreURL': 'https://www.npmjs.com/package/react-router'
+
+  'React Router: setRouteLeaveHook':
+    'prefix': 'this-pros-router'
+    'body': """
+      this.props.router.setRouteLeaveHook(
+        this.props.route,
+        this.routerWillLeave
+      )
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Router</span>"
+    'description': 'Declarative routing for React.'
+    'descriptionMoreURL': 'https://www.npmjs.com/package/react-router'
+
+  'React Router: routerWillLeave()':
+    'prefix': 'routerWillLeave'
+    'body': """
+      routerWillLeave() {
+        if (${1}) {
+          return '${2:You have unsaved information, are you sure you want to leave?}';
+        }
+      }
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Router</span>"
+    'description': 'Declarative routing for React.'
+    'descriptionMoreURL': 'https://www.npmjs.com/package/react-router'
+
+  'React Router: transition.abort()':
+    'prefix': 'transition-abort'
+    'body': 'transition.abort();'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Router</span>"
+    'description': 'Declarative routing for React.'
+    'descriptionMoreURL': 'https://www.npmjs.com/package/react-router'
+
+  'React Router: transition.retry()':
+    'prefix': 'transition-retry'
+    'body': 'transition.retry();'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Router</span>"
+    'description': 'Declarative routing for React.'
+    'descriptionMoreURL': 'https://www.npmjs.com/package/react-router'
+
+  'React Router: transition.redirect()':
+    'prefix': 'transition-redirect'
+    'body': 'transition.redirect(${1:to}, ${2:params}, ${3:query});'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Router</span>"
+    'description': 'Declarative routing for React.'
+    'descriptionMoreURL': 'https://www.npmjs.com/package/react-router'

@@ -1,12 +1,7 @@
 
-'.text.html.ruby,.text.html.erb':
+'.text.html.ruby, .text.html.erb':
 
-  'erb_exec_block':
-    'prefix': '<%  %>'
-    'body': '<% $1 %>'
-    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-    'description': 'Embedded ruby .... '
-    'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
+
 
   'erb_exec_block':
     'prefix': 'erb'
@@ -23,7 +18,7 @@
     'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
 
   'erb_loop_block':
-    'prefix': '.each loop block erb'
+    'prefix': 'each-do'
     'body': """
       <% ${1:array}.each do |${2:element}| %>
         <%= $3 %>
@@ -162,7 +157,7 @@
     'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
 
   '.each with index':
-    'prefix': '.each_with_index'
+    'prefix': 'each_with_index'
     'description': 'each with index'
     'body': """
       .each_with_index do |$1, index| %>
@@ -197,7 +192,7 @@
     'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
 
   'if else statement':
-    'prefix': 'if else'
+    'prefix': 'if-else'
     'descrition': 'if else multiline statement'
     'body': """
       <% if ${1:true} %>
@@ -284,304 +279,3 @@
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': '<% Embedded ruby.. %>'
     'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-
-  ##########################
-  # Form and inputs
-  ##########################
-  # 'form_for':
-  #   'prefix': 'form_for'
-  #   'body': """
-  #
-  #     # <%= form_for ${1} do |f| %>
-  #     #   ${2:<%= render "shared/errors", object: ${1} %>}
-  #     #   ${3:<%= f.text_field :${4:field} %>}
-  #     #   ${0}
-  #     # <% end %>
-  #
-  #     <%= form_for ${1:@record_object} $ do |${2:record}| %>
-  #       ${3:Record Label}: <%= ${4:record}.${5:text}_field :${6:first_name} %>
-  #         ${7}
-  #       <%= record_form.submit %> ${0}
-  #     <% end %>
-  #   """
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': 'form_for(record, options = {}, &block) '
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'feilds_for':
-  #   'prefix': 'fields_for'
-  #   'body': """
-  #     <%= fields_for :${1:permission}, ${2:@person.permission} do |${3:permission_fields}| %>
-  #       ${4:Admin?}  : <%= ${5:permission}_fields.${6:check_box :admin} %>
-  #     <% end %> ${0}
-  #   """
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': 'fields_for(record_name, record_object = nil, options = {}, &block) '
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'form_tag':
-  #   'prefix': 'form_tag'
-  #   'body': """
-  #     <%= form_tag ${1:submission_path}, ${2: method: :get, multipart: true, class: ":navbar-form navbar-left search-form"} do %>
-  #       <%= text_field_tag(
-  #           :${4:search},
-  #           params[:${4:search}],
-  #           placeholder: "Search",
-  #           class: "form-control"
-  #       ) %>
-  #     <% end %>
-  #   """
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': 'form_tag(url_for_options = {}, options = {}, &block) '
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'label_field':
-  #   'prefix': 'label_field'
-  #   'body': '<%= f.label :${1:object_field}${2:, class: "${3:control-label}"} %>$0'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  #
-  # 'text_field':
-  #   'prefix': 'text_field'
-  #   'body': '<%= f.text_field :${1:object_field}${2:, class: "${3:form-control}"} %>'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'password_field':
-  #   'prefix': 'password_field'
-  #   'body': '<%= f.password_field :${1:object_field}${2:, class: "${3:form-control}"} %>'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'email_field':
-  #   'prefix': 'email_field'
-  #   'body': '<%= f.email_field :${1:object_field}${2:, class: "${3:form-control}"} %>'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'hidden_field':
-  #   'prefix': 'hidden_field'
-  #   'body': '<%= f.hidden_field :${1:object_field}, value: "${2:true}" %>'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'number_field':
-  #   'prefix': 'number_field'
-  #   'body': '<%= f.number_field :${1:object_field}${2:, class: "${3:form-control}"}, step: "0.01" %>'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'week_field':
-  #   'prefix': 'week_field'
-  #   'body': '<%= f.week_field :${1:object_field}${2:, class: "${3:form-control}"}, step: "0.01" %>'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'url_field':
-  #   'prefix': 'url_field'
-  #   'body': '<%= f.url_field :${1:object_field}${2:, class: "${3:form-control}"}, step: "0.01" %>'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'time_field':
-  #   'prefix': 'time_field'
-  #   'body': '<%= f.time_field :${1:object_field}${2:, class: "${3:form-control}"}, step: "0.01" %>'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'range_field':
-  #   'prefix': 'range_field'
-  #   'body': '<%= f.range_field :${1:object_field}${2:, class: "${3:form-control}"}, step: "0.01" %>'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'search_field':
-  #   'prefix': 'search_field'
-  #   'body': '<%= f.search_field :${1:object_field}${2:, class: "${3:form-control}"}, step: "0.01" %>'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'telephone_field':
-  #   'prefix': 'telephone_field'
-  #   'body': '<%= f.telephone_field :${1:object_field}${2:, class: "${3:form-control}"}, step: "0.01" %>'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'phone_field':
-  #   'prefix': 'phone_field'
-  #   'body': '<%= f.phone_field :${1:object_field}${2:, class: "${3:form-control}"}, step: "0.01" %>'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'month_field':
-  #   'prefix': 'month_field'
-  #   'body': '<%= f.month_field :${1:object_field}${2:, class: "${3:form-control}"}, step: "0.01" %>'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  #
-  # 'text_area':
-  #   'prefix': 'text_area'
-  #   'body': '<%= f.text_area :${1:object_field}${2:, class: "${3:form-control}"} %>'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'collection_select':
-  #   'prefix': 'collection_select'
-  #   'body': """
-  #     <%= f.collection_select(
-  #           :${1:resource_id},
-  #           @${2:collection},
-  #           :${3:id},
-  #           :${4:name},
-  #           { ${5:include_blank: "${6:Please select one}"} },
-  #           { ${7:class: "${8:form-control}"} }
-  #     ) %>
-  #   """
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'select_field':
-  #   'prefix': 'select_field'
-  #   'body': """
-  #     <%= f.select(
-  #         :${1:resource_id},
-  #         options_from_collection_for_select(
-  #           @${2:collection},
-  #           :${3:id},
-  #           :${4:name},
-  #           f.object.${1:resource_id}
-  #         ),
-  #         { ${5:include_blank: "${6:Please select one}"} },
-  #         { ${7:class: "${8:form-control}"} }
-  #     ) %>$0
-  #   """
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'select_enum_field':
-  #   'prefix': 'select_enum_field'
-  #   'body': """
-  #     <%= f.select(
-  #         :${1:enum_attribute},
-  #         f.object.class.${1:enum_attribute}s.to_a.map {|e|
-  #           [
-  #             e.first, # label
-  #             e.first
-  #           ]
-  #         },
-  #         { },
-  #         { }
-  #     ) %>$0
-  #   """
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'select_tag':
-  #   'prefix': 'select_tag'
-  #   'body': """
-  #     <%= select_tag(
-  #       :${1:color_id},
-  #       options_from_collection_for_select(
-  #         @${2:colors},
-  #         :${3:id},
-  #         :${4:name},
-  #         params[:${1:color_id}]
-  #       ),
-  #       { ${5:include_blank: "${6:Please select one}"} },
-  #       { ${7:class: "${8:form-control}"} }
-  #     ) %> $0
-  #   """
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'options_from_collection_for_select':
-  #   'prefix': 'options_from_collection_for_select'
-  #   'description': 'options_from_collection_for_select(collection, value_method, text_method, selected = nil)'
-  #   'body': 'options_from_collection_for_select(@${1:products}, :${2:id}, :${3:name}, ${4:f.object.${5:product_id}})$0'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'options_for_select':
-  #   'prefix': 'options_for_select'
-  #   'description': 'options_for_select(container, selected = nil)'
-  #   'body': 'options_for_select'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'check_box':
-  #   'prefix': 'check_box'
-  #   'body': '<%= f.check_box(${1:object_name}, ${2: method,  options = {}, checked_value = "1", unchecked_value = "0") } %>'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': 'check_box(object_name, method, options = {}, checked_value = "1", unchecked_value = "0") '
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'color_field':
-  #   'prefix': 'color_field'
-  #   'body': '<%= f.color_field(${1:object_name}, ${2: method, options = {})  } %> ${0}'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': 'color_field(object_name, method, options = {}) '
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'date_field':
-  #   'prefix': 'date_field'
-  #   'body': '<%= f.date_field(${1:object_name}, ${2: method, options = {})  } %> ${0}'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': 'date_field(object_name, method, options = {})  '
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'datetime_field':
-  #   'prefix': 'datetime_field'
-  #   'body': '<%= f.datetime_field(${1:object_name}, ${2: method, options = {})  } %> ${0}'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': 'datetime_field(object_name, method, options = {})  '
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'file_field':
-  #   'prefix': 'file_field'
-  #   'body': '<%= f.file_field :${1:file}, accept: "${2:video/mp4}", class: "form-control" %>'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': 'check_box(object_name, method, options = {}, checked_value = "1", unchecked_value = "0") '
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'submit_field':
-  #   'prefix': 'submit_field'
-  #   'body': '<%= f.submit "${1:Save / Update}"${2:, class: "${3:btn btn-primary"}} %>$0'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<% Embedded ruby.. %>'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  #
-  # 'submit_tag':
-  #   'prefix': 'submit_tag'
-  #   'body': '<%= submit_tag "${1:Search!}"${2:, class: "${4:btn btn-${3:primary}}"} %>$0'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<%= submit_tag "${1:Search!}"${2:, class: "${4:btn btn-${3:primary}}"} %>$0'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
-  # 'input':
-  #   'prefix': 'input'
-  #   'body': '<%= f.${1:text}_field :${2:field}${3:, class: "${4:form-control}"} %>$0'
-  #   'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
-  #   'description': '<%= f.${1:text}_field :${2:field}${3:, class: "${4:form-control}"} %>$0'
-  #   'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'

@@ -1,0 +1,57 @@
+'.source.coffee':
+
+  'Find a Record: this.store.find()':
+    'prefix': 'this-store-find()'
+    'body': "this.store.find${1:(}'${2:model}'${1:)}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Use store.findAll() to retrieve record for a given type '
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.13.0/models/finding-records/'
+
+  'Find by Params: this.store.find()':
+    'prefix': 'this-store-find()'
+    'body': "this.store.find${1:(}'${2:model}', params.${2:model}_id${1:)}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Use store.findAll() to retrieve record for a given params '
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.13.0/models/finding-records/'
+
+  'Find All: this.store.fiAll()':
+    'prefix': 'this-store-findAll()'
+    'body': "this.store.findAll${1:(}'${2:model}'${1:)}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Use store.findAll() to retrieve all of the records for a given type'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.13.0/models/finding-records/'
+
+  'Find Record: this.store.findRecord() ':
+    'prefix': 'this-store-findRecord()'
+    'body': "this.store.findRecord${1:(}'${2:model}', params.${2:model}_id${1:)}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Use store.findRecord() to retrieve a single record by its type and ID. '
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.13.0/models/finding-records/'
+
+  'Peek All: this.store.peekAll()':
+    'prefix': 'this-store-peekAll'
+    'body': "this.store.peekAll${1:(}'${2:model}'${1:)}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Use store.peekAll() to retrieve all of the records for a given type that are already loaded into the store, without making a network request'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.13.0/models/finding-records/'
+
+  'Peek a Record: this.store.peekRecord()':
+    'prefix': 'this-store-peekRecord()'
+    'body': "this.store.peekRecord${1:(}'${2:model}', params.${2:model}_id${1:)}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Use store.peekRecord() to retrieve a record by its type and ID, without making a network request '
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.13.0/models/finding-records/'
+
+  'Query All: this.store.query()':
+    'prefix': 'this-store-query()'
+    'body': "this.store.query${1:(}'${2:model}', { ${2:queryKey}: ${3:queryValue}}${1:)}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Calling store.query() will make a GET request with the passed object serialized as query params '
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.13.0/models/finding-records/'
+
+  'Query Record: this.store.queryRecord()':
+    'prefix': 'this-store-queryRecord()'
+    'body': "this.store.queryRecord${1:(}'${2:model}', { ${2:queryKey}: ${3:queryValue}}${1:)}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Calling store.query() will make a GET request with the passed object serialized as query params '
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.13.0/models/finding-records/'

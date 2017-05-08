@@ -11,62 +11,72 @@
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_migrations.html '
+
   'add_column':
     'prefix': 'add_column'
     'body': 'add_column :${1:table_name}, :${2:column_name}, :${3:type}, ${4:default: ${5::value}}'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_migrations.html '
+
   'drop_table':
     'prefix': 'drop_table'
     'body': 'drop_table :${1:table_name}'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_migrations.html '
+
   'rename_table':
     'prefix': 'rename_table'
     'body': 'rename_table :${1:old_table_name}, :${2:new_table_name}'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_migrations.html '
+
   'rename_column':
     'prefix': 'rename_column'
     'body': 'rename_column :${1:table_name}, :${2:column_name}, :${3:new_column_name}'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_migrations.html '
+
   'remove_column_new':
-    'prefix': 'remove_column_ne'
+    'prefix': 'remove_column_new'
     'body': 'remove_column :${1:table_name}, :${2:column_name}'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_migrations.html '
+
   'change_column':
     'prefix': 'change_column'
     'body': 'change_column :${1:table_name}, :${2:column_name}, :${3:type}, ${4:default: 0}'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_migrations.html '
+
   'add_index':
-    'prefix': 'dbai'
+    'prefix': 'add_index'
     'body': 'add_index :${1:table_name}, :${2:column_name}${3:, {$4}}'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_migrations.html '
+
   'add_foreign_key':
-    'prefix': 'dbafk'
+    'prefix': 'add_foreign_key'
     'body': 'add_foreign_key :${1:from_table}, :${2:to_table}${3:, options = {}}'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_migrations.html '
+
   'remove_foreign_key':
-    'prefix': 'dbrfk'
+    'prefix': 'remove_foreign_key'
     'body': 'remove_foreign_key :${1:from_table}, column: :${2:model_id}'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
     'descriptionMoreURL': 'http://guides.rubyonrails.org/active_record_migrations.html '
+
   'change_default':
-    'prefix': 'dbcd'
+    'prefix': 'change_default'
     'description': 'change_column_default(table_name, column_name, default)'
     'body': "change_column_default :${1:table_name}, :${2:column_name}, ${3:'new_default'}"
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'

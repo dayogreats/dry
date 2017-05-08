@@ -1,7 +1,7 @@
 '.text.haml > .line.ruby.haml > .source.ruby, .text.haml > .line.ruby.haml > .source.ruby.embedded.html':
 
   'haml embedded each':
-    'prefix': '.each'
+    'prefix': 'each'
     'body': """
       .each do |${1:member}|
         = ${1:member} $2
@@ -21,7 +21,7 @@
     'descriptionMoreURL': '#'
 
   'haml embedded block with parm':
-    'prefix': 'do params'
+    'prefix': 'do-params'
     'body': """
       do |${1:member}|
         = ${1:member}$2

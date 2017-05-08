@@ -74,21 +74,21 @@
     'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
 
   'data attributes':
-    'prefix': 'data: {}'
+    'prefix': 'data:'
     'body': 'data: { ${1:key}: ${2:value} }$0'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': "data: { key: :value }"
     'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
 
   'data toggle-tooltip attributes':
-    'prefix': 'data: {tooltip'
+    'prefix': 'data-tooltip'
     'body': 'data: { toggle: :tooltip, title: "$1" }$0'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': "data: { toggle: :tooltip, title: 'title' }"
     'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
 
   'data turbolinks false':
-    'prefix': 'data: {turbolinks: :false }'
+    'prefix': 'data-turbolinks'
     'description': "data: { turbolinks: :false }"
     'body': 'data: { turbolinks: :${1:false} }$0'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
@@ -103,7 +103,7 @@
     'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
 
   'class key-value':
-    'prefix': 'class:'
+    'prefix': 'class-key-value'
     'body': 'class: "${1:btn}"$0'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': "class: 'class'"
@@ -124,7 +124,7 @@
     'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
 
   'toggle key-value':
-    'prefix': 'toggle: v'
+    'prefix': 'toggle-key-value'
     'body': 'toggle: ${1:tooltip}$0'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': 'Embedded ruby .... '
@@ -138,7 +138,7 @@
     'descriptionMoreURL': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html'
 
   'placeholder key-value':
-    'prefix': 'placeholder'
+    'prefix': 'placeholder:'
     'body': 'placeholder: "$1"$0'
     'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">rails</span>'
     'description': "placeholder: 'hi'"

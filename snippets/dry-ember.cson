@@ -1,0 +1,414 @@
+
+'.source.js':
+
+  'import Ember':
+    'prefix': 'import-ember'
+    'body': """
+      import Ember from 'ember';
+      const { ${1} } = Ember;
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember Import'
+    'descriptionMoreURL': 'https://guides.emberjs.com'
+
+  'const {} = Ember':
+    'prefix': 'const '
+    'body': """
+      const { ${1} } = Ember;
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember constants varaiable '
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/'
+
+  'Ember: run(() => { ... })':
+    'prefix': 'run'
+    'body':"""
+      run(() => {
+        ${1}
+      });
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember run'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/'
+  #
+  #
+  # Ember Object Snippets
+  #
+  'Ember: let ... get(...)':
+    'prefix': 'get'
+    'body': 'let $1 = ${2:this}.get(\'$1\');'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember object'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/'
+
+  'Ember: .set(...)':
+    'prefix': 'set'
+    'body': "${1:this}.set('${2}', ${3});"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember object'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/'
+
+  'Emeber: .get(...)':
+    'prefix': 'get()'
+    'body': "${1:this}.get('${2}');"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember object'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/'
+
+  'Ember: this._super(...)':
+    'prefix': 'super'
+    'body': 'this._super(...arguments);'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember object'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/'
+
+  'Emeber init(){ ... }':
+    'prefix': 'init'
+    'body':"""
+      init(){
+        this._super(...arguments);
+        ${1}
+      },
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember object'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/'
+
+  'Ember inject.service(...)':
+    'prefix': 'inject'
+    'body': 'inject.service(${1}),'
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember object'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/'
+
+  'Emebr computed(...)':
+    'prefix': 'computed'
+    'body': """
+      computed('${1:property}', function() {
+        ${2:// body}
+      }),
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember object'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/'
+
+  'Emebr observer(...)':
+    'prefix': 'observer'
+    'body': """
+      observer('${1:property}', function() {
+        ${2:// body}
+      }),
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember object'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/'
+
+  'Emebr: on(...)':
+    'prefix': 'on'
+    'body': """
+      on('${1:property}', function() {
+        ${2:// body}
+      }),
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember object'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/'
+
+  'Ember: actions: { ... }':
+    'prefix': 'actions'
+    'body': """
+      actions: {
+        ${1:// body}
+      }
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember object'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/'
+
+  'computed.alias(...)':
+    'prefix': 'alias'
+    'body': 'computed.alias(\'${2:property}\')',
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember object '
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/'
+
+  #
+  #
+  # Route Snippets
+  #
+  'Emebr Route: model(...){ ... }':
+    'prefix': 'model'
+    'body': """
+      model(params = {}) {
+        return this.store.query('${1}', params);
+      },
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember route event '
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/routing/'
+
+  'Ember Route: setupController(...){ ... }':
+    'prefix': 'setupController'
+    'body':"""
+      setupController(controller, model) {
+        this._super(controller, model);
+        ${1}
+      },
+
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember event handlers'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/'
+
+  'Ember Route: afterModel(...){ ... }':
+    'prefix': 'afterModel'
+    'body':"""
+      afterModel(model, transition) {
+        ${1}
+      },
+
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember event handlers'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/'
+
+  #
+  #
+  # Component Snippets
+  #
+  'Ember Component: didReceiveAttrs(){ ... }':
+    'prefix': 'didReceiveAttrs'
+    'body':"""
+      didReceiveAttrs(){
+        this._super(...arguments);
+        ${1}
+      },
+
+    """
+    'Ember leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember event handlers'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/'
+
+  'Emebr Component: didRender(){ ... }':
+    'prefix': 'didRender'
+    'body':"""
+      didRender(){
+        this._super(...arguments);
+        ${1}
+      },
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember event handlers'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/'
+
+  'Ember Component: didInsertElement(){ ... }':
+    'prefix': 'didInsertElement'
+    'body':"""
+      didInsertElement(){
+        this._super(...arguments);
+        ${1}
+      },
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember event handlers'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/'
+
+  'Ember Component: willDestroyElement(){ ... }':
+    'prefix': 'willDestroyElement'
+    'body':"""
+      willDestroyElement(){
+        this._super(...arguments);
+        ${1}
+      },
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember event handlers'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/'
+  #
+  #
+  # Enumerables
+  #
+  'Ember: .filterBy(...)':
+    'prefix': 'filterBy'
+    'body': "${1:enumerable}.filterBy('${2:property}', ${3:value});"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember enumerables'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/object-model/enumerables/'
+
+  'Ember: .mapBy(...)':
+    'prefix': 'mapby'
+    'body': "${1:enumerable}.mapBy('${2:property}');"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember enumerables'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/object-model/enumerables/'
+
+
+  'Ember enum: .every(...)':
+    'prefix': 'every'
+    'body': """
+      ${1:enumerable}.every(function(${2:item}) {
+        ${3}
+      });
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember enumerables'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/object-model/enumerables/'
+
+  'Ember enum: .isEvery(...)':
+    'prefix': 'isEvery'
+    'body': "${1:enumerable}.isEvery('${2:property}', ${3:bool});"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember enumerables'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/object-model/enumerables/'
+
+  'Ember enum:.some(...)':
+    'prefix': 'some'
+    'body': """
+      ${1:enumerable}.some(function(${2:item}) {
+        ${3}
+      });
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember enumerables'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/object-model/enumerables/'
+
+  'Ember enum: .isAny(...)':
+    'prefix': 'isAany'
+    'body': "${1:enumerable}.isAny('${2:property}', ${3:bool});"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember enumerables'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/object-model/enumerables/'
+
+  'Ember enum: .toArray(...)':
+    'prefix': 'toArray'
+    'body': '${1:enumerable}.toArray();'
+  'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+  'description': 'Ember enumerables'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/object-model/enumerables/'
+
+  'Ember enum: .get(\'firstObject\')':
+    'prefix': 'firstObject'
+    'body': "${1:enumerable}.get('firstObject');"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember enumerables'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/object-model/enumerables/'
+
+  'Ember enum: .get(\'lastObject\')':
+    'prefix': 'lastObject'
+    'body': "${1:enumerable}.get('lastObject');"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember enumerables'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/object-model/enumerables/'
+
+  #
+  # Logger
+  #
+  'Ember Log: Logger.debug(...)':
+    'prefix': 'logger-debug'
+    'body': "Logger.debug('${1:message}');"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember logger'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/configuring-ember/debugging/'
+
+  'Ember Log: Logger.log(...)':
+    'prefix': 'logger-log'
+    'body': "Ember.Logger.log('${1:message}');"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember logger'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/configuring-ember/debugging/'
+
+  'Ember Log: Logger.info(...)':
+    'prefix': 'logger-info'
+    'body': "Ember.Logger.info('${1:message}');"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember logger'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/configuring-ember/debugging/'
+
+  'Ember Log: Logger.warn(...)':
+    'prefix': 'logger-warn'
+    'body': "Ember.Logger.warn('${1:message}');"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember logger'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/configuring-ember/debugging/'
+
+  'Ember Log: Logger.error(...)':
+    'prefix': 'logger-error'
+    'body': "Ember.Logger.error('${1:message}');"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember logger'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/configuring-ember/debugging/'
+
+  #
+  # Test Helpers
+  #
+
+  'Ember Test: visit(...)':
+    'prefix': 'visit'
+    'body': "visit('${1:url}');"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember testing'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/testing/'
+
+  'Ember Test: fillIn(...)':
+    'prefix': 'fillIin'
+    'body': "fillIn('${1:selector}', '${2:text}');"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember testing'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/testing/'
+
+  'Ember Test: click(...)':
+    'prefix': 'click'
+    'body': "click('${1:selector}');"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember testing'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/testing/'
+
+  'Ember Test: keyEvent(...)':
+    'prefix': 'keyEevent'
+    'body': "keyEvent('${1:selector}', '${2:type}', '${3:keyCode}');"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember testing'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/testing/'
+
+  'Ember Test : triggerEvent(...)':
+    'prefix': 'triggerEvent'
+    'body': "triggerEvent('${1:selector}', '${2:type}', '${3:options}');"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember testing'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/testing/'
+
+  'Ember Test: find(...)':
+    'prefix': 'findElement'
+    'body': "find('${1:selector}', '${2:context}');"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember testing'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/testing/'
+
+  'Ember Test: await pauseTest(...)':
+    'prefix': 'pause'
+    'body':"""
+      await pauseTest();
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember testing'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/testing/'
+
+  'Ember Test: await wait(...)':
+    'prefix': 'wait'
+    'body':"""
+      await wait();
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember testing'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/testing/'
+
+  'Ember Test:  andThen(...)':
+    'prefix': 'and'
+    'body':"""
+      andThen(() => {
+        ${1}
+      });
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>EmberJs</span>"
+    'description': 'Ember testing'
+    'descriptionMoreURL': 'https://guides.emberjs.com/v2.1.0/components/handling-events/v2.1.0/testing/'

@@ -1,5 +1,5 @@
 '.source.js':
-  
+
 # ///GulpJs
   'Gulp source ':
     'prefix': 'gulp-src'
@@ -57,14 +57,4 @@
     'description': 'Gulp is a toolkit for automating painful or time-consuming tasks in your development. '
     'descriptionMoreURL': 'https://github.com/gulpjs/gulp/blob/master/docs/API.md'
 
-  'gulp.watch(glob[, opts], tasks)':
-    'prefix': 'gulp-watcher'
-    'body': """
-      gulp.watch('${1:path}', function(event) {
-          console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-        });
-        $0
-      """
-    'leftLabelHTML': '<span style=\"color:red; display:inline-block; font-weight:400; font-size:1.25em \">GulpJs</span>'
-    'description': 'Gulp is a toolkit for automating painful or time-consuming tasks in your development. '
-    'descriptionMoreURL': 'https://github.com/gulpjs/gulp/blob/master/docs/API.md'
+  

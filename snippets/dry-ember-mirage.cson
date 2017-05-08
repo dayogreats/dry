@@ -1,0 +1,45 @@
+# ember-cli-mirage snippets
+
+'.source.js':
+
+  'Ember Mirage Factory: afterCreate':
+    'prefix': 'afterCreate'
+    'body': """
+      afterCreate(${1:model}, server) {
+        $2
+      },
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>Ember-Mirage</span>"
+    'description': 'Ember mirage'
+    'descriptionMoreURL': 'http://www.ember-cli-mirage.com/docs/v0.1.x/'
+
+  'Ember Mirage Factory: trait':
+    'prefix': 'trait'
+    'body': """
+      $1: trait({
+        $2
+      }),
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>Ember-Mirage</span>"
+    'description': 'Ember mirage'
+    'descriptionMoreURL': 'http://www.ember-cli-mirage.com/docs/v0.1.x/'
+
+  'Ember Mirage Factory:  .create(...)':
+    'prefix': 'create'
+    'body': """
+      server.create(\'${1:model}\', ${2:\'${3:trait}\',} ${4:\{ $5 \}});
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>Ember-Mirage</span>"
+    'description': 'Ember mirage'
+    'descriptionMoreURL': 'http://www.ember-cli-mirage.com/docs/v0.1.x/'
+
+  'Ember Mirage Server: endpoint':
+    'prefix': 'server'
+    'body': """
+      server.${1:get}('${2:/}', (${3:schema, request}) => {
+        $4
+      });
+    """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>Ember-Mirage</span>"
+    'description': 'Ember mirage'
+    'descriptionMoreURL': 'http://www.ember-cli-mirage.com/docs/v0.1.x/'

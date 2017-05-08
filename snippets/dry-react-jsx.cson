@@ -1,0 +1,281 @@
+".source.js":
+
+  "React JSX: import empty()":
+    "prefix": "import"
+    "body": "import ${1} from '${2}';"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>JS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: import()":
+    "prefix": "import-react"
+    "body": "import React from 'react';"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: import() with PropTypes":
+    "prefix": "import-react, "
+    "body": "import React, { PropTypes } from 'react';"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: import react-dom()":
+    "prefix": "import-react-dom"
+    "body": "import ReactDOM from 'react-dom';"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: componentDidMount() { ... }":
+    "prefix": "componentDidMount"
+    "body": "componentDidMount() {\n\t${1}\n}${2}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: componentDidUpdate(pp, ps) { ... }":
+    "prefix": "componentDidUpdate"
+    "body": "componentDidUpdate(prevProps, prevState) {\n\t${1}\n}${2}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: componentWillMount() { ... }":
+    "prefix": "componentWillMount"
+    "body": "componentWillMount() {\n\t${1}\n}${2}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: componentWillReceiveProps(np) { ... }":
+    "prefix": "componentWillReceiveProps"
+    "body": "componentWillReceiveProps(nextProps) {\n\t${1}\n}${2}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: componentWillUnmount() { ... }":
+    "prefix": "componentWillUnmount"
+    "body": "componentWillUnmount() {\n\t${1}\n}${2}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: componentWillUpdate(np, ns) { ... }":
+    "prefix": "componentWillUpdate"
+    "body": "componentWillUpdate(nextProps, nextState) {\n\t${1}\n}${2}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: cx({ ... })":
+    "prefix": "cx"
+    "body": "cx({\n\t$1: $2\n});"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: forceUpdate(...)":
+    "prefix": "forceUpdate"
+    "body": "forceUpdate(${1:callback});"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: getDefaultProps() { return {...} } ":
+    "prefix": "getDefaultProps"
+    "body": "getDefaultProps() {\n\treturn {\n\t\t${1}\n\t};\n},"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: getInitialState() { return {...} } ":
+    "prefix": "getInitialState"
+    "body": "getInitialState() {\n\treturn {\n\t\t${1}: ${2}\n\t};\n},"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: isMounted()":
+    "prefix": "isMounted"
+    "body": "isMounted()"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: Class.contextTypes = { ... }":
+    "prefix": "contextTypes"
+    "body": "${1}.contextTypes = {\n\t${2}: React.PropTypes.${3:string}\n};"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: Class.propTypes = { ... }":
+    "prefix": "propTypes"
+    "body": "${1}.propTypes = {\n\t${2}: React.PropTypes.${3:string}\n};"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: Class.defaultProps = { ... }":
+    "prefix": "defaultProps"
+    "body": "${1}.defaultProps = {\n\t${2}: ${3}\n};"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: static contextTypes = { ... }":
+    "prefix": "static contextTypes"
+    "body": "static contextTypes = {\n\t${1}: PropTypes.${2:string}\n}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: static propTypes = { ... }":
+    "prefix": "static propTypes"
+    "body": "static propTypes = {\n\t${1}: PropTypes.${2:string}\n}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: static defaultProps = { ... }":
+    "prefix": "static-defaultProps"
+    "body": "static defaultProps = {\n\t${1}: ${2}\n}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: propTypes { ... }":
+    "prefix": "propTypes"
+    "body": "propTypes: {\n\t${1}: React.PropTypes.${2:string}\n},"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: React.PropTypes.":
+      "prefix": "React-proTypes"
+      "body": "React.PropTypes."
+      'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+      'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+      'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: class skeleton":
+    "prefix": "import-react"
+    "body": "import React from 'react';\n\nclass ${1} extends React.Component {\n\n\trender() {\n\t\treturn (\n\t\t\t${2:<div></div>}\n\t\t);\n\t}\n\n}\n\nexport default ${1};"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: createClass skeleton":
+    "prefix": "import-react-createClass"
+    "body": "import React from 'react';\n\nexport default React.createClass({\n\n\trender() {\n\t\treturn (\n\t\t\t${1:<div></div>}\n\t\t);\n\t}\n\n});"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: Stateless Component":
+    "prefix": "improt-stateless-component"
+    "body": "import React from 'react';\n\nconst ${1} = ({${2}}) => (\n\t<div>${4}</div>\n);\n\n${1}.propTypes = {\n\t${2}: React.PropTypes.${3}\n};\n\nexport default ${1};"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: Stateless Component Return":
+    "prefix": "import-stateless-component-return"
+    "body": "import React from 'react';\n\nconst ${1} = ({${2}}) => {\n\treturn (\n\t\t<div>${4}</div>\n\t);\n}\n\n${1}.propTypes = {\n\t${2}: React.PropTypes.${3}\n};\n\nexport default ${1};"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: Stateless Component Click":
+    "prefix": "import-react-stateless-click"
+    "body": "import React from 'react';\n\nconst ${1} = ({${2}}) => {\n\tconst handleClick = () => {};\n\treturn (\n\t\t<div onClick={handleClick}>${4}</div>\n\t);\n}\n\n${1}.propTypes = {\n\t${2}: React.PropTypes.${3}\n};\n\nexport default ${1};"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: Stateless Component PropTypes":
+    "prefix": "import-react-stateless-protypes"
+    "body": "import React, {PropTypes} from 'react';\n\nconst ${1} = ({${2}}) => (\n\t<div>${4}</div>\n);\n\n${1}.propTypes = {\n\t${2}: PropTypes.${3}\n};\n\nexport default ${1};"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: Stateless Function":
+    "prefix": "import-react-stateless-funct"
+    "body": "const ${1} = ({${2}}) => (\n\t<div>{${2}}</div>\n);"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: Component displayName":
+    "prefix": "displayName"
+    "body": "${1}.displayName = '${1}';"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: render() { return ... }":
+    "prefix": "render"
+    "body": "render() {\n\treturn (\n\t\t${1:<div></div>}\n\t);\n}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: setState({ ... })":
+    "prefix": "setState"
+    "body": "this.setState({\n\t${1}: ${2}\n});"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: shouldComponentUpdate(np, ns) { ... }":
+    "prefix": "shouldComponentUpdate"
+    "body": "shouldComponentUpdate(nextProps, nextState) {\n\t${1}\n}${2}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: this.props.":
+    "prefix": "props"
+    "body": "this.props.${1}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: this.state.":
+    "prefix": "state"
+    "body": "this.state.${1}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: render(component, container, [callback])":
+    "prefix": "React-render"
+    "body": "React.render(${1:<$2 />}, ${3:document."body"}${4:, ${5:callback}});"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: constructor(props)":
+    "prefix": "constructor"
+    "body": "constructor(props) {\n\tsuper(props);\n\t${1:this.state = ${2};}\n}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: class Foo extends Bar":
+    "prefix": "class"
+    "body": "class ${1:Foo} extends ${2:React.Component} {\n\trender() {\n\t\t${3}\n\t}\n}"
+      'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+      'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+      'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
+
+  "React JSX: dangerouslySetInnerHTML":
+    "prefix": "dangerouslySetInnerHTML"
+    "body": "dangerouslySetInnerHTML={{__html: ${1}}}"
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-JXS</span>"
+    'description': 'A syntax extension to JavaScript that provides syntactic sugar for the React.createElement().'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/introducing-jsx.html'
