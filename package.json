@@ -2,7 +2,7 @@
   "name": "dry",
   "version": "4.8.0",
   "main": "./snippets",
-  "description": "A collection of snippets covering all of ExpressJs, BodyParser APIs, GulgJs, GruntJs, React, EmberJs and Ruby on Rails, Rspec.",
+  "description": "A collection of snippets covering all of ExpressJs, Body-Parser APIs, GulgJs, GruntJs, React, EmberJs and Ruby on Rails, Rspec.",
   "keywords": [
     "Atom",
     "Nodejs",

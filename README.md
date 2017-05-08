@@ -1,8 +1,8 @@
 # DRY(DON'T REPEAT YOURSELF)
 
-A collection of snippets covering all of [expressjs](http://expressjs.com/), [ruby on rails](http://rubyonrails.org/), [emberjs](http://emberjs.com/), [electron](http://electron.atom.io/), rspec, react](https://facebook.github.io/react/) and [body-parser](https://github.com/expressjs/body-parser) APIs.
+A collection of snippets covering all of [expressjs](http://expressjs.com/), [ruby on rails](http://rubyonrails.org/), [emberjs](http://emberjs.com/), [electron](http://electron.atom.io/), rspec, [react](https://facebook.github.io/react/) and [body-parser](https://github.com/expressjs/body-parser) APIs.
 
-There is no need to remember any short-code. Just write you codes in any of the supported frameworks/languages and watch dry do it job.
+There is no need to remember any short-code. Just write you codes in any of the supported frameworks /languages and watch dry do it job by suggesting snippets to you.
 ## Notes
 
 * In software engineering, Don't Repeat Yourself (DRY) is a principle of software development, aimed at reducing repetition of information of all kinds, especially useful in multi-tier architectures.
