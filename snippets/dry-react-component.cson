@@ -1,24 +1,20 @@
 '.source.js.jsx':
-
   'React ES6 Component':
     'prefix': 'import-react-es6-comp'
     'body': """
-      import React, { Component, PropTypes } from 'react';
+        import React, { Component, PropTypes } from 'react';
 
-      export default class ${1:MyComponent} extends Component {
-        render() {
-          return (${2:<div>MyComponent</div>});
+        export default class ${1:MyComponent} extends Component {
+          render() {
+            return (${2:<div>MyComponent</div>});
+          }
         }
-      }
-
-      ${1}.propTypes = {
-      };
-
-    """
+        ${1}.propTypes = {
+        };
+      """
     'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Comp</span>"
     'description': 'A javascript library by facebook for building user interface'
     'descriptionMoreURL': 'https://facebook.github.io/react/docs/components-and-props.html'
-
   'React ES6 Component with Constructor':
     'prefix': 'import-react-constructor'
     'body': """
@@ -33,10 +29,8 @@
           return (${2:<div>MyComponent</div>});
         }
       }
-
       ${1}.propTypes = {
       };
-
     """
     'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Comp</span>"
     'description': 'A javascript library by facebook for building user interface'
@@ -49,7 +43,6 @@
         super(props);
         ${1}
       }
-
     """
     'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Comp</span>"
     'description': 'A javascript library by facebook for building user interface'
@@ -96,14 +89,18 @@
   # PropType string
   'React PropType string':
     'prefix': 'PropType'
-    'body': "${1:myProp}: PropTypes.string,"
+    'body': """
+      ${1:myProp}: PropTypes.string,
+      """
     'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Comp</span>"
     'description': 'A javascript library by facebook for building user interface'
     'descriptionMoreURL': 'https://facebook.github.io/react/docs/components-and-props.html'
 
   'React PropType string required':
     'prefix': 'PropType-isRequired'
-    'body': "${1:myProp}: PropTypes.string.isRequired,"
+    'body': """
+      ${1:myProp}: PropTypes.string.isRequired,
+      """
     'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Comp</span>"
     'description': 'A javascript library by facebook for building user interface'
     'descriptionMoreURL': 'https://facebook.github.io/react/docs/components-and-props.html'
@@ -111,14 +108,18 @@
   # PropType number
   'React PropType number':
     'prefix': 'PropTypes-number'
-    'body': "${1:myProp}: PropTypes.number,"
-      'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Comp</span>"
-      'description': 'A javascript library by facebook for building user interface'
-      'descriptionMoreURL': 'https://facebook.github.io/react/docs/components-and-props.html'
+    'body': """
+      ${1:myProp}: PropTypes.number,
+      """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Comp</span>"
+    'description': 'A javascript library by facebook for building user interface'
+    'descriptionMoreURL': 'https://facebook.github.io/react/docs/components-and-props.html'
 
   'React PropType number required':
     'prefix': 'PropTypes-'
-    'body': "${1:myProp}: PropTypes.number.isRequired,"
+    'body': """
+      ${1:myProp}: PropTypes.number.isRequired,
+      """
     'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Comp</span>"
     'description': 'A javascript library by facebook for building user interface'
     'descriptionMoreURL': 'https://facebook.github.io/react/docs/components-and-props.html'
@@ -126,14 +127,18 @@
   # PropType object
   'React PropType object':
     'prefix': 'PropTypes-object'
-    'body': "${1:myProp}: PropTypes.object,"
+    'body': """
+      ${1:myProp}: PropTypes.object,
+      """
     'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Comp</span>"
     'description': 'A javascript library by facebook for building user interface'
     'descriptionMoreURL': 'https://facebook.github.io/react/docs/components-and-props.html'
 
   'React PropType object required':
-    'prefix': 'r'
-    'body': "${1:myProp}: PropTypes.object.isRequired,"
+    'prefix': 'PropTypes-object-required'
+    'body': """
+      ${1:myProp}: PropTypes.object.isRequired,
+      """
     'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Comp</span>"
     'description': 'A javascript library by facebook for building user interface'
     'descriptionMoreURL': 'https://facebook.github.io/react/docs/components-and-props.html'
@@ -141,14 +146,18 @@
   # PropType array
   'React PropType array':
     'prefix': 'PropTypes-array'
-    'body': "${1:myProp}: PropTypes.array,"
+    'body': """
+      ${1:myProp}: PropTypes.array,
+      """
     'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Comp</span>"
     'description': 'A javascript library by facebook for building user interface'
     'descriptionMoreURL': 'https://facebook.github.io/react/docs/components-and-props.html'
 
   'React PropType array required':
     'prefix': 'PropTypes'
-    'body': "${1:myProp}: PropTypes.array.isRequired,"
+    'body': """
+      ${1:myProp}: PropTypes.array.isRequired,
+      """
     'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Comp</span>"
     'description': 'A javascript library by facebook for building user interface'
     'descriptionMoreURL': 'https://facebook.github.io/react/docs/components-and-props.html'
@@ -156,14 +165,18 @@
   # PropType bool
   'React PropType bool':
     'prefix': 'PropTypes-bool'
-    'body': "${1:myProp}: PropTypes.bool,"
+    'body': """
+      ${1:myProp}: PropTypes.bool,
+      """
     'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Comp</span>"
     'description': 'A javascript library by facebook for building user interface'
     'descriptionMoreURL': 'https://facebook.github.io/react/docs/components-and-props.html'
 
   'React PropType bool required':
     'prefix': 'PropTypes-bool-required'
-    'body': "${1:myProp}: PropTypes.bool.isRequired,"
+    'body': """
+      ${1:myProp}: PropTypes.bool.isRequired,
+      """
     'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Comp</span>"
     'description': 'A javascript library by facebook for building user interface'
     'descriptionMoreURL': 'https://facebook.github.io/react/docs/components-and-props.html'
@@ -171,30 +184,37 @@
   # PropType element
   'React PropType element':
     'prefix': 'PropTypes-element'
-    'body': "${1:myProp}: PropTypes.element,"
+    'body': """
+      ${1:myProp}: PropTypes.element,
+      """
     'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Comp</span>"
     'description': 'A javascript library by facebook for building user interface'
     'descriptionMoreURL': 'https://facebook.github.io/react/docs/components-and-props.html'
 
   'React PropType element required':
     'prefix': 'PropTypes-element-required'
-    'body': "${1:myProp}: PropTypes.element.isRequired,"
+    'body': """
+      ${1:myProp}: PropTypes.element.isRequired,
+      """
     'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Comp</span>"
     'description': 'A javascript library by facebook for building user interface'
     'descriptionMoreURL': 'https://facebook.github.io/react/docs/components-and-props.html'
 
-
   # PropType function
   'React PropType function':
     'prefix': 'PropTypes-func'
-    'body': "${1:myProp}: PropTypes.func,"
+    'body': """
+      ${1:myProp}: PropTypes.func,
+      """
     'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React-Comp</span>"
     'description': 'A javascript library by facebook for building user interface'
     'descriptionMoreURL': 'https://facebook.github.io/react/docs/components-and-props.html'
 
   'React PropType function required':
     'prefix': 'PropTypes-funct-required'
-    'body': "${1:myProp}: PropTypes.func.isRequired,"
+    'body': """
+      ${1:myProp}: PropTypes.func.isRequired,
+      """
     'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>React Comp</span>"
     'description': 'A javascript library by facebook for building user interface'
     'descriptionMoreURL': 'https://facebook.github.io/react/docs/components-and-props.html'

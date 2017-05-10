@@ -1,190 +1,175 @@
 '.source.js':
-
-  'Grunt load tasks'
-      'prefix': 'grunt-load'
-      'body': """
-      // Load the plugin that provides the plugin task.
-      grunt.loadNpmTasks('${1: grunt-contrib-connect}'); $0
-      """
-      'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
-      'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
-      'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
-
-    'Grunt register task':
-      'prefix': 'grunt-register'
-      'body': """
-       grunt.registerTask('${1:default}', ['${2:plugin names}']); $0
-       """
-       'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
-       'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
-       'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
-
-    'Grunt register multitask task':
-      'prefix': 'grunt-register-multitasks'
-      'body': """
-       grunt.registerMultiTask('${1:default}', [${2:description,} ] ${3:taskFunction}) $0
-       """
-       'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
-       'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
-       'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
-
-    'Grunt register basic task':
-      'prefix': 'grunt-register-basic'
-      'body': """
-         module.exports = function(grunt) {
-          // A very basic default task.
-          grunt.registerTask('default', 'Log some stuff.', function() {
-            grunt.log.write('Logging some stuff...').ok();
-          });
-        };
-        $0
-       """
-       'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
-       'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
-       'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
-
-    'Grunt build':
-      'prefix': 'grunt-build'
-      'body': """
+  'Grunt load tasks':
+    'prefix': 'grunt-load'
+    'body': """
+    grunt.loadNpmTasks('${1: grunt-contrib-connect}'); $0
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
+    'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
+    'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
+  'Grunt register task':
+    'prefix': 'grunt-register'
+    'body': """
+      grunt.registerTask('${1:default}', ['${2:plugin names}']); $0
+         """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
+    'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
+    'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
+  'Grunt register multitask task':
+    'prefix': 'grunt-register-multitasks'
+    'body': """
+     grunt.registerMultiTask('${1:default}', [${2:description,} ] ${3:taskFunction}) $0
+     """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
+    'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
+    'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
+  'Grunt register basic task':
+    'prefix': 'grunt-register-basic'
+    'body': """
+       module.exports = function(grunt) {
+        // A very basic default task.
+        grunt.registerTask('default', 'Log some stuff.', function() {
+          grunt.log.write('Logging some stuff...').ok();
+        });
+      };
+      $0
+     """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
+    'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
+    'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
+  'Grunt build':
+    'prefix': 'grunt-build'
+    'body': """
       ${1:build}: {
         src: '${2:src/<%= pkg.name %>.js}',
         dest: '${3:build/<%= pkg.name %>.min.js}'
       }
-      $0"""
-      'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
-      'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
-      'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
-
-    'Grunt pkg':
-      'prefix': 'grunt-pkg'
-      'body': """
-      pkg: grunt.file.read${1:JSON}('package.json');
-      $0"""
-      'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
-      'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
-      'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
-
-    'Grunt dev task':
-      'prefix': 'grunt-tasks'
-      'body': """
+        $0"""
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
+    'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
+    'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
+  'Grunt pkg':
+    'prefix': 'grunt-pkg'
+    'body': """
+        pkg: grunt.file.read${1:JSON}('package.json');
+        $0"""
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
+    'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
+    'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
+  'Grunt dev task':
+    'prefix': 'grunt-tasks'
+    'body': """
       ${1:task}: {
         src: '${2:src/<%= pkg.name %>.js}',
         dest: '${3:build/<%= pkg.name %>.min.js}'
       }
       $0"""
-      'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
-      'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
-      'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
-
-    'Grunt config':
-      'prefix': 'grunt-config'
-      'body': """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
+    'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
+    'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
+  'Grunt config':
+    'prefix': 'grunt-config'
+    'body': """
       grunt.initConfig({
-          pkg: grunt.file.readJSON('package.json'),
-          ${1:uglify}: {
-            ${2:options}: {
-              banner: '${3:/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */}'
-            },
-            ${3:build}: {
-              src: '${4:src/<%= pkg.name %>.js}',
-              dest: '&{5:build/<%= pkg.name %>.min.js}'
+        pkg: grunt.file.readJSON('package.json'),
+        ${1:uglify}: {
+          ${2:options}: {
+            banner: '${3:/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */}'
+          },
+          ${3:build}: {
+            src: '${4:src/<%= pkg.name %>.js}',
+            dest: '&{5:build/<%= pkg.name %>.min.js}'
+          }
+        }
+      });
+     $0
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
+    'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
+    'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
+  'Grunt dev task':
+    'prefix': 'grunt-tasks'
+    'body': """
+      ${1:task}: {
+        src: '${2:src/<%= pkg.name %>.js}',
+        dest: '${3:build/<%= pkg.name %>.min.js}'
+      }
+      $0"""
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
+    'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
+    'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
+  'Grunt config':
+    'prefix': 'grunt-config'
+    'body': """
+      grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        ${1:uglify}: {
+          ${2:options}: {
+            banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */'
+          },
+          ${3:build}: {
+            src: 'src/<%= pkg.name %>.js',
+            dest: 'build/<%= pkg.name %>.min.js'
             }
           }
         });
        $0
       """
-      'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
-      'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
-      'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
-
-    'Grunt dev task':
-      'prefix': 'grunt-tasks'
-      'body': """
-      ${1:task}: {
-        src: '${2:src/<%= pkg.name %>.js}',
-        dest: '${3:build/<%= pkg.name %>.min.js}'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
+    'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
+    'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
+  'Grunt plugins':
+    'prefix': 'grunt-plugin'
+    'body': """
+      ${1:uglify}: {
+        ${2:options}: {
+          ${3:banner}: '${4:/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n}'
+        },
+        ${5:build}: {
+          src: '${6:src/<%= pkg.name %>.js}',
+          dest: '${7:build/<%= pkg.name %>.min.js}'
+        }
       }
-      $0"""
-      'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
-      'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
-      'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
-
-    'Grunt config':
-      'prefix': 'grunt-config'
-      'body': """
+     $0
+    """
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
+    'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
+    'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
+  'Grunt module':
+    'prefix': 'grunt-module'
+    'body': """
+      module.exports = function(grunt) {
+        // Project configuration.
       grunt.initConfig({
           pkg: grunt.file.readJSON('package.json'),
-          ${1:uglify}: {
-            ${2:options}: {
-              banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */'
+          uglify: {
+            options: {
+              banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
-            ${3:build}: {
+            build: {
               src: 'src/<%= pkg.name %>.js',
               dest: 'build/<%= pkg.name %>.min.js'
             }
           }
         });
-       $0
-      """
-      'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
-      'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
-      'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
+        // Load the plugin that provides the plugin(e.g "uglify") task.
+        grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    'Grunt plugins':
-      'prefix': 'grunt-plugin'
-      'body': """
-        ${1:uglify}: {
-          ${2:options}: {
-            ${3:banner}: '${4:/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n}'
-          },
-          ${5:build}: {
-            src: '${6:src/<%= pkg.name %>.js}',
-            dest: '${7:build/<%= pkg.name %>.min.js}'
-          }
-        }
-       $0
-      """
-      'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
-      'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
-      'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
-
-    'Grunt module':
-      'prefix': 'grunt-module'
-      'body': """
-        module.exports = function(grunt) {
-
-          // Project configuration.
-        grunt.initConfig({
-            pkg: grunt.file.readJSON('package.json'),
-            uglify: {
-              options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-              },
-              build: {
-                src: 'src/<%= pkg.name %>.js',
-                dest: 'build/<%= pkg.name %>.min.js'
-              }
-            }
-          });
-          // Load the plugin that provides the plugin(e.g "uglify") task.
-          grunt.loadNpmTasks('grunt-contrib-uglify');
-
-          // Default task(s).
-          grunt.registerTask('default', ['uglify']);
-        };
-       $0"""
-      'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
-      'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
-      'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
-
-    'Grunt module basic':
-      'prefix': 'grunt-module-basic'
-      'body': """
+        // Default task(s).
+        grunt.registerTask('default', ['uglify']);
+      };
+     $0"""
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
+    'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
+    'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
+  'Grunt module basic':
+    'prefix': 'grunt-module-basic'
+    'body': """
       module.exports = function(grunt) {
             // Do grunt-related things in here
             $1
       };
        $0"""
-      'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
-      'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
-      'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'
+    'leftLabelHTML': '<span style=\"color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em\">Gruntjs</span>'
+    'description': 'Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. '
+    'descriptionMoreURL': 'https://gruntjs.com/creating-tasks'

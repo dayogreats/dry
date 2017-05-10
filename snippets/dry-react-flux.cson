@@ -1,8 +1,7 @@
 ".source.js":
-
   "Flux Action":
-    prefix: "import-appDispatcher"
-    body: """
+    "prefix": "import-appDispatcher"
+    "body": """
       import ${1:AppDispatcher} from '../dispatcher/${1:AppDispatcher}';
       import ${2:constants} from '../constants/${2:constants}';
       import ${3:utils} from '../utils/${3:utils}';
@@ -13,44 +12,41 @@
     'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>Flux</span>"
     'description': 'Flux is the application architecture that Facebook uses for building client-side web applications '
     'descriptionMoreURL': 'https://facebook.github.io/flux/docs/overview.html'
-
-
   "Flux: AppDispatcher":
-    prefix: "import-flux-dispatcher"
-    body: """
-      import { Dispatcher } from 'flux';
-      let AppDispatcher = new Dispatcher();
-      AppDispatcher.handleAction = function(action) {
-          this.dispatch({
-              source: 'VIEW_ACTION',
-                action: action
-                  });};
-      export default AppDispatcher;"
-      """
-      'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>Flux</span>"
-      'description': 'Flux is the application architecture that Facebook uses for building client-side web applications '
-      'descriptionMoreURL': 'https://facebook.github.io/flux/docs/overview.html'
-
+    "prefix": "import-flux-dispatcher"
+    "body": """
+        import { Dispatcher } from 'flux';
+        let AppDispatcher = new Dispatcher();
+        AppDispatcher.handleAction = function(action) {
+            this.dispatch({
+                source: 'VIEW_ACTION',
+                  action: action
+                    });};
+        export default AppDispatcher;"
+        """
+    'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>Flux</span>"
+    'description': 'Flux is the application architecture that Facebook uses for building client-side web applications '
+    'descriptionMoreURL': 'https://facebook.github.io/flux/docs/overview.html'
   "Flux: Store":
-    prefix: "flux-store"
-    body: """
-    import ${1:AppDispatcher} from '../dispatcher/${1:AppDispatcher}';
-    import ${2:appConstants} from '../constants/${2:appConstants}';
-    import { EventEmitter } from 'event';
-    import assign from 'react/lib/Object.assign';
-    let _state = {};
-    let ${3:store} = assign({}, EventEmitter.prototype, {
-        ${4}
-        });
-    AppDispatcher.register((payload) => {
-      let { action } = payload;
-        switch(action.actionType) {
-            default:
-                return true;
-          }
-          });
-    export default ${3:store};"
-    """
+    "prefix": "flux-store"
+    "body": """
+        import ${1:AppDispatcher} from '../dispatcher/${1:AppDispatcher}';
+        import ${2:appConstants} from '../constants/${2:appConstants}';
+        import { EventEmitter } from 'event';
+        import assign from 'react/lib/Object.assign';
+        let _state = {};
+        let ${3:store} = assign({}, EventEmitter.prototype, {
+            ${4}
+            });
+        AppDispatcher.register((payload) => {
+          let { action } = payload;
+            switch(action.actionType) {
+                default:
+                    return true;
+              }
+              });
+        export default ${3:store};"
+        """
     'leftLabelHTML': "<span style='color:#ed225d;display:inline-block;font-weight:400;font-size:1.25em '\>Flux</span>"
     'description': 'Flux is the application architecture that Facebook uses for building client-side web applications '
     'descriptionMoreURL': 'https://facebook.github.io/flux/docs/overview.html'
